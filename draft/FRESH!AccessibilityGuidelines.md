@@ -25,6 +25,20 @@ FRESH!のサービスに携わるコンテンツ、及びUIの開発者（フロ
 
 非テキストコンテンツ（画像や動画）には代替テキストを提供する
 
+###### 実装方法 / 解説
+
+1. [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
+2. [キャプション (収録済):達成基準 1.2.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+
+###### テスト方法
+
+1. ESlintによる自動チェック
+  1. [eslint-plugin-jsx-a11y/accessible-emoji](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md)
+  2. [eslint-plugin-jsx-a11y/img-has-alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md)
+  3. [eslint-plugin-jsx-a11y/iframe-has-title](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md)
+2. [aXe](https://www.deque.com/products/axe/) による自動チェック
+3. コードレビューによるチェック
+
 ##### 1.1.2 コントロール、入力のテキスト
 
 ユーザーが操作するコントロールや入力を受け付けるUIは、目的を説明する名前をテキストで提供する
