@@ -1,8 +1,8 @@
 {
   "rules": {
     "preset-japanese": {
-    	"max-ten": false,
-    	"sentence-length": false
+      "max-ten": false,
+      "sentence-length": false
     },
     "preset-jtf-style": true
   }
