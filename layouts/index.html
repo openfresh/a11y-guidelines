@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    {{ partial "meta.html" . }}
+  </head>
+  <body>
+    <div class="Container">
+      <h1>{{ .Site.Title }}</h1>
+      <ul>
+        <li><a href="{{ .Site.BaseURL }}/foo/">foo</a></li>
+      </ul>
+    </div>
+    {{ partial "script.html" . }}
+  </body>
+</html>

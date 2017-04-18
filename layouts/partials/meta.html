@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ if eq .Title .Site.Title }}
+  <title>{{ .Site.Title }}</title>
+{{ else }}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ end }}
+<link rel="icon" href="{{ .Site.BaseURL }}/favicon.png">
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/favicon.png">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/app.css">
+<link rel="alternate" href="{{ .Site.BaseURL }}/index.xml" title="1000ch.net" type="application/rss+xml">
+
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@1000ch">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ .Title }}">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
