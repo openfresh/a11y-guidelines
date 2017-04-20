@@ -1,0 +1,11 @@
+baseurl: "openfresh.github.io/a11y-guidelines"
+title: "FRESH! Accessibility Guidelines"
+footnotereturnlinkcontents: "↩"
+contentdir: "content"
+layoutdir: "layouts"
+staticdir: "static"
+publishdir: "public"
+uglyUrls: false
+metaDataFormat: "yaml"
+permalinks:
+  post: "/:title"
