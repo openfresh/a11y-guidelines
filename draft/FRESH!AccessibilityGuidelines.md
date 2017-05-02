@@ -23,12 +23,13 @@ FRESH!のサービスに携わるコンテンツ、及びUIの開発者（フロ
 
 ##### 1.1.1 非テキストコンテンツの代替テキスト
 
-非テキストコンテンツ（画像や動画）には代替テキストを提供する
+非テキストコンテンツ（画像など）には代替テキストを提供する
 
 ###### 実装方法 / 解説
 
-1. [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
-2. [キャプション (収録済):達成基準 1.2.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+1. [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
+
+解説 : [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ###### テスト方法
 
@@ -43,37 +44,98 @@ FRESH!のサービスに携わるコンテンツ、及びUIの開発者（フロ
 
 ユーザーが操作するコントロールや入力を受け付けるUIは、目的を説明する名前をテキストで提供する
 
-#### 1.2 適応可能
+###### 実装方法 / 解説
+
+1. [`label`要素を用いてテキストのラベルとフォーム・コントロールを関連付ける](http://waic.jp/docs/WCAG-TECHS/H44)
+2. [`a`要素のリンクの目的を説明するリンクテキストを提供する](http://waic.jp/docs/WCAG-TECHS/H30)
+3. [`aria-label`を用いてオブジェンクとのラベルを提供する](http://www.w3.org/TR/WCAG20-TECHS/ARIA6)
+
+解説 : [達成基準 1.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html#text-equiv-all-situation-c-controls)
+
+#### 1.2 動画、音声メディアに代替コンテンツを提供する
+
+##### 1.2.1 収録済の音声及び動画にだいたいコンテンツを提供する
+
+###### 実装方法 / 解説
+
+1. 動画に[キャプション](http://waic.jp/docs/UNDERSTANDING-WCAG20/media-equiv-captions.html)を提供する
+2. 音声メディア、音声がある動画には[書き起こしのテキストなど](http://waic.jp/docs/WCAG-TECHS/G69.html)を提供する
+3. 1,2 が難しい場合動画や音声メディアについてのテキストによる解説や要約を提供する
+
+解説 : [時間依存メディア:ガイドライン 1.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/media-equiv.html)
+
+#### 1.3 適応可能
 
 情報、及び構造を損なうことなく、様々な方法で提供できるようにコンテンツを制作すること
 
-##### 1.2.1 情報及び関係性
+##### 1.3.1 情報及び関係性
 
 コンテンツやUI、及びそれらの関係性をテキストで提供するか、プログラムによる解釈が可能な状態にする
 
-##### 1.2.2 感覚的な特徴
+###### 実装方法 / 解説
 
-コンテンツやUIの説明は、色や形、視覚的な位置や方向、音などの感覚的な特徴に依存させない
+1. 適切な要素を用いてマークアップする。次に例として挙げるのは代表的な例でこれに限らない。
+  1.1 [見出しを特定するために、h1 要素～ h6 要素を使用する](http://waic.jp/docs/WCAG-TECHS/H42.html)
+  1.2 [リストは `ul` , `ol` , `dl` を用いる](http://waic.jp/docs/WCAG-TECHS/H48.html)
+  1.3 [表の情報を提示するために、テーブルのマークアップを使用する](http://waic.jp/docs/WCAG-TECHS/H51.html)
 
-#### 1.3 判別可能
+解説 : [情報及び関係性:達成基準 1.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+
+##### 1.3.2 意味のある順序
+
+コンテンツの順番に意味がある場合は、正しく読む順番をプログラムによる解釈を可能にする
+
+###### 実装方法 / 解説
+
+1. [DOMの順番と表示順を一致させる](http://waic.jp/docs/WCAG-TECHS/C27)
+2. [単語内の文字間を空けるためなど、文書の整形にスペースを利用](http://waic.jp/docs/WCAG-TECHS/F32.html)しない
+
+解説 : [意味のある順序:達成基準 1.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+
+##### 1.3.3 感覚的な特徴
+
+コンテンツやUIの説明は、色や形、視覚的な位置や方向、音などの感覚的な特徴だけで説明しない
+
+###### 実装方法 / 解説
+
+1. [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
+2. [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
+
+解説 : [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
+
+#### 1.4 判別可能
 
 コンテンツを、利用者にとって見やすく、聞きやすいものにすること。
 
-##### 1.3.1 色の使用
+##### 1.4.1 色の使用
 
 色が、情報を伝える、動作を示す、反応を促す、又は視覚的な要素を判別するための唯一の視覚的手段としない
 
-##### 1.3.2 音声の制御
+###### 実装方法 / 解説
+
+1. [色の違いで伝えている情報をテキストでも伝える](http://waic.jp/docs/WCAG-TECHS/G14)
+2. [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
+
+解説 : [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+
+##### 1.4.2 音声の制御
 
 可能な限り音声を自動的に再生しない。音声が自動的に再生される場合は、音声を停止、またはコンテンツの音量を調整できるメカニズムを提供する。
 
-##### 1.3.3 コントラスト
+1. [ユーザーが望む（と予想できる）際に限って音声を自動的に再生する](http://waic.jp/docs/WCAG-TECHS/G171)
+2. 動画プレイヤーには音声の調整ボタン、ミュートボタンを搭載する
 
-コンテンツやUI上のテキストやアイコンの視覚的提示に、4.5:1以上のコントラスト比を設ける。ただし、次の場合は除くが、可能な限りコントラスト比を確保する。大きな文字サイズのテキスト操作不可能なUI上のテキストロゴタイプ
+##### 1.4.3 コントラスト
 
-##### 1.3.4 テキストブロックの視覚的提示
+コンテンツやUI上のテキストやアイコンと背景に適切なコントラスト比を持たせる（4.5:1以上を推奨）。ただし、次の場合は除くが、可能な限りコントラスト比を確保する。
 
-テキストブロックの幅を80文字（全角40文字）前後に収めるテキストを均等割付をしない
+- 装飾的な文字、意味のない文字
+- 操作不可能なUI上のテキスト
+- ロゴタイプ
+
+###### 実装方法 / 解説
+
+解説 : [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### 2 操作可能
 
