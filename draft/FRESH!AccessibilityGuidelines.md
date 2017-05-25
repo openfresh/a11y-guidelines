@@ -462,13 +462,51 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 コンテンツは、支援技術を含む様々なUAが確実に解釈できるよう十分に堅牢 (robust) でなければならない。
 
-#### 4.1 構文解析
+#### 4.1 互換性
 
-マークアップ言語を用いて実装されているコンテンツやUIは、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どのIDも一意的である。ただし、仕様で認められているものを除く。
+未知のものを含む、さまざまなユーザーエージェントとの互換性を高めること
 
-#### 4.2 名前・役割、及び値
+##### 4.1.1 構文解析
+
+HTML、及び構築するDOMは、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どのIDも一意的にする。ただし、仕様で認められているものを除く。
+
+[構文解析 : 達成基準 4.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-parses.html)
+
+##### 4.1.2 名前・役割、及び値
 
 ユーザーが操作するすべてのUI(フォームを構成する要素、リンクなど）では、名前 (name) 及び役割 (role) は、プログラムによる解釈が可能である。又、状態、プロパティ、ユーザーが設定可能な値はプログラムによる設定が可能である。そして、支援技術を含むUAが、これらの項目に対する変更通知を利用できる
+
+###### 実装方法 / 解説
+
+**良くない実装方法**
+
+HTMLにある要素を利用せず、`<div>` や `<span>` を利用する
+
+```html
+<span className="Button" onclick="">button</span>
+```
+
+**良い実装例**
+
+HTMLで定義されている要素を使用する。HTMLに適切な要素がない場合、WAI-ARIA で定義されている `role` で適切なものがあればそれを指定する
+
+```html
+<span role="tooltip">ツールチップ</span>
+```
+
+WAI-ARIA の `role` 属性を使用する場合でも、対応していないUAに向けてなるべく適切なHTML要素を選択する
+
+```html
+<ul role="menu">
+<li role="presentation"><a role="menuitem" href="#hoge">hoge</a></li>
+<li role="presentation"><a role="menuitem" href="#fuga">fuga</a></li>
+</ul>
+```
+
+**解説**
+
+- [名前 (name) ・役割 (role) 及び値 (value) : 達成基準 4.1.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [5. The Roles Model : Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#roles)
 
 ## [WIP]配信面
 
