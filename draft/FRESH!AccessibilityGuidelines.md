@@ -373,6 +373,42 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 入力エラーが自動的に検出された場合は、エラーとなっている箇所が特定され、そのエラーがユーザーにテキストで説明される
 
+###### 実装方法 / 解説
+
+**良くない実装例**
+
+スタイルのみでエラーであることを示し、エラーの内容が分からない
+
+```html
+<label> ふりがな
+<input type="text" class="Input -invalid" />
+</label>
+```
+
+```css
+.Input.-invalid {
+	border: 2px solid red;
+}
+```
+
+**良い実装例**
+
+テキストでエラーの内容が明示されている
+
+```html
+<label> ふりがな
+<input type="text" class="Input -invalid" aria-invalid="true" aria-describedby="alert-message-few-text" />
+</label>
+<p role="alert" aria-live="assertive" id="alert-message-few-text">ふりがなはひらがなかカタカナで入力してください</p>
+```
+
+※スタイルでも合わせて明示することを否定するものではありません。
+
+**解説**
+
+- [エラーの特定 - 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+- [ARIA21: Using Aria-Invalid to Indicate An Error Field | Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/ARIA21)
+
 ##### 3.3.2 ラベル又は説明
 
 コンテンツがユーザーの入力を要求する場合は、ラベル又は説明文が提供されている
