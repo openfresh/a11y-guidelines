@@ -153,7 +153,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 
 フォーカスを受け取れない要素への `click` イベントの付与や `hover` 擬似クラスのみを利用したコンテンツの出し分けなど
 
-```
+```jsx
 <div onClick={}>
   content...
  </div>
@@ -163,7 +163,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 
 フォーカスを受け取れる要素の使用、 `focus` 擬似クラスの併用など
 
-```
+```jsx
 <button type="button" onClick={}>
    content...
 </button>
@@ -334,7 +334,7 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 `<html>` 要素に `lang` 属性を記述する
 
-```
+```html
 <!DOCTYPE html>
 <html lang="ja">
 ```
