@@ -175,7 +175,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 
 マウスのみを想定しているUIでは、他のデバイスから使用できないことが多くあるが、キーボードやタッチデバイスでの操作を担保することで他のデバイスによる操作もカバーしやすい
 
-[キーボード - 達成基準 2.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html)
+[キーボード : 達成基準 2.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html)
 
 ###### 例外
 
@@ -252,7 +252,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 自動更新するコンテンツ（ニュースティッカーやカルーセル）も、一種の制限時間付きのコンテンツと考えられるため
 
-- [タイミング調整可能 - 達成基準 2.2.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+- [タイミング調整可能 : 達成基準 2.2.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
 
 ##### 2.2.2 一時停止、停止、非表示
 
@@ -308,7 +308,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 > ニュースを配信する組織のホームページには、広告、検索、その他のサービスのためのたくさんのブロック及びサイドバーに囲まれて、ページの中央にメインの記事がある。ページの先頭に、そのメインの記事へジャンプするリンクがある。このリンクを使わないと、キーボードを使用している利用者は、メインの記事へ到達するまでに Tab キーを押下しながら40前後のリンクを通り抜ける必要があり、る。また、スクリーンリーダーの利用者は、200の単語を聞かなければならない。そして、画面拡大ソフトの利用者は、メインの記事の場所を探し回らなければならなくなる。
 
-[ブロックスキップ - 達成基準 2.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+[ブロックスキップ : 達成基準 2.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ##### 2.4.2 ページタイトル
 
@@ -318,7 +318,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 HTMLの `<title>` 要素に、適切なタイトルを他のページと重複することなく記述すること。
 
-[ページタイトル - 達成基準 2.4.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+[ページタイトル : 達成基準 2.4.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
 ### 3 理解可能
 
@@ -406,7 +406,7 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 **解説**
 
-- [エラーの特定 - 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+- [エラーの特定 : 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
 - [ARIA21: Using Aria-Invalid to Indicate An Error Field | Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/ARIA21)
 
 ##### 3.3.2 入力欄のラベルまたは説明
@@ -456,7 +456,7 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 **解説**
 
-- [ラベル又は説明 - 達成基準 3.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [ラベル又は説明 : 達成基準 3.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ### 4 堅牢性
 
