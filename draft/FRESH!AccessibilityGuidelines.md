@@ -192,7 +192,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 複雑な操作例 : 
 
 1. 10秒以内に <kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd><kbd>←</kbd><kbd>→</kbd><kbd>a</kbd><kbd>b</kbd><kbd>a</kbd><kbd>b</kbd> を入力しないと出てこないメニュー
-2. <kbd>→</kbd><kbd>↓</kbd><kbd>→</kbd>+<kbd>↓</kbd><kbd>p</kbd> を0.3秒以内に入力しないと出ない必殺技
+2. <kbd>→</kbd><kbd>↓</kbd><kbd>→+↓</kbd><kbd>p</kbd> を0.3秒以内に入力しないと出ない必殺技
 
 ##### 2.1.3 特定のデバイスの機能に依存しない
 
