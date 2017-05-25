@@ -409,9 +409,54 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 - [エラーの特定 - 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
 - [ARIA21: Using Aria-Invalid to Indicate An Error Field | Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/ARIA21)
 
-##### 3.3.2 ラベル又は説明
+##### 3.3.2 入力欄のラベルまたは説明
 
-コンテンツがユーザーの入力を要求する場合は、ラベル又は説明文が提供されている
+ユーザーの入力を要求するUIには、ラベル又は説明文を提供する
+
+###### 実装方法 / 解説
+
+**良くない実装方法**
+
+`placeholder` 属性を入力内容の説明に使用する
+
+```html
+<input type="text" placeholder="コメントを入力する" />
+```
+
+※ `placeholder` 属性での説明では入力が開始されると見えなくなり、ユーザーを混乱させてしまう
+
+**良い実装方法**
+
+- 近接する位置に説明を置き、 `label` 要素を用いて関連づける
+
+```html
+<label> コメントを入力する
+<input type="text" />
+</label>
+```
+
+- 入力欄の隣に明確なラベルづけされたボタンを配置し、入力欄の説明とする
+
+```html
+<input type="search" />
+<button type="submit">検索</button>
+```
+
+- 説明と入力欄で構成されている節では、説明を見出しとし関連を可視化する
+
+```html
+<section>
+<h2>ご意見・ご要望</h2>
+<form>
+<textarea></textarea>
+<button type="submit">送信する</button>
+</form>
+</section>
+```
+
+**解説**
+
+- [ラベル又は説明 - 達成基準 3.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ### 4 堅牢性
 
