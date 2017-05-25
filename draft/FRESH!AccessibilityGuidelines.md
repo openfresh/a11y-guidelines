@@ -175,7 +175,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 
 マウスのみを想定しているUIでは、他のデバイスから使用できないことが多くあるが、キーボードやタッチデバイスでの操作を担保することで他のデバイスによる操作もカバーしやすい
 
-[キーボード - 達成基準 2.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html)
+[キーボード : 達成基準 2.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html)
 
 ###### 例外
 
@@ -252,7 +252,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 自動更新するコンテンツ（ニュースティッカーやカルーセル）も、一種の制限時間付きのコンテンツと考えられるため
 
-- [タイミング調整可能 - 達成基準 2.2.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+- [タイミング調整可能 : 達成基準 2.2.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
 
 ##### 2.2.2 一時停止、停止、非表示
 
@@ -308,7 +308,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 > ニュースを配信する組織のホームページには、広告、検索、その他のサービスのためのたくさんのブロック及びサイドバーに囲まれて、ページの中央にメインの記事がある。ページの先頭に、そのメインの記事へジャンプするリンクがある。このリンクを使わないと、キーボードを使用している利用者は、メインの記事へ到達するまでに Tab キーを押下しながら40前後のリンクを通り抜ける必要があり、る。また、スクリーンリーダーの利用者は、200の単語を聞かなければならない。そして、画面拡大ソフトの利用者は、メインの記事の場所を探し回らなければならなくなる。
 
-[ブロックスキップ - 達成基準 2.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+[ブロックスキップ : 達成基準 2.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ##### 2.4.2 ページタイトル
 
@@ -318,7 +318,7 @@ iOS のフォースタッチでのみ動作するメニュー
 
 HTMLの `<title>` 要素に、適切なタイトルを他のページと重複することなく記述すること。
 
-[ページタイトル - 達成基準 2.4.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+[ページタイトル : 達成基準 2.4.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
 ### 3 理解可能
 
@@ -406,7 +406,7 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 **解説**
 
-- [エラーの特定 - 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+- [エラーの特定 : 達成基準 3.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html)
 - [ARIA21: Using Aria-Invalid to Indicate An Error Field | Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/ARIA21)
 
 ##### 3.3.2 入力欄のラベルまたは説明
@@ -456,19 +456,57 @@ HTMLの `<title>` 要素に、適切なタイトルを他のページと重複�
 
 **解説**
 
-- [ラベル又は説明 - 達成基準 3.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [ラベル又は説明 : 達成基準 3.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ### 4 堅牢性
 
 コンテンツは、支援技術を含む様々なUAが確実に解釈できるよう十分に堅牢 (robust) でなければならない。
 
-#### 4.1 構文解析
+#### 4.1 互換性
 
-マークアップ言語を用いて実装されているコンテンツやUIは、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どのIDも一意的である。ただし、仕様で認められているものを除く。
+未知のものを含む、さまざまなユーザーエージェントとの互換性を高めること
 
-#### 4.2 名前・役割、及び値
+##### 4.1.1 構文解析
+
+HTML、及び構築するDOMは、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どのIDも一意的にする。ただし、仕様で認められているものを除く。
+
+[構文解析 : 達成基準 4.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-parses.html)
+
+##### 4.1.2 名前・役割、及び値
 
 ユーザーが操作するすべてのUI(フォームを構成する要素、リンクなど）では、名前 (name) 及び役割 (role) は、プログラムによる解釈が可能である。又、状態、プロパティ、ユーザーが設定可能な値はプログラムによる設定が可能である。そして、支援技術を含むUAが、これらの項目に対する変更通知を利用できる
+
+###### 実装方法 / 解説
+
+**良くない実装方法**
+
+HTMLにある要素を利用せず、`<div>` や `<span>` を利用する
+
+```html
+<span className="Button" onclick="">button</span>
+```
+
+**良い実装例**
+
+HTMLで定義されている要素を使用する。HTMLに適切な要素がない場合、WAI-ARIA で定義されている `role` で適切なものがあればそれを指定する
+
+```html
+<span role="tooltip">ツールチップ</span>
+```
+
+WAI-ARIA の `role` 属性を使用する場合でも、対応していないUAに向けてなるべく適切なHTML要素を選択する
+
+```html
+<ul role="menu">
+<li role="presentation"><a role="menuitem" href="#hoge">hoge</a></li>
+<li role="presentation"><a role="menuitem" href="#fuga">fuga</a></li>
+</ul>
+```
+
+**解説**
+
+- [名前 (name) ・役割 (role) 及び値 (value) : 達成基準 4.1.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
+- [5. The Roles Model : Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#roles)
 
 ## [WIP]配信面
 
