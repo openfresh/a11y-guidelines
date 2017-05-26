@@ -15,9 +15,38 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-1. [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
+**良くない実装**
 
-解説 : [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
+`alt` 属性が無い
+
+```html
+<img src="fresh.jpg" />
+```
+
+意味のある画像を背景画像にしている
+
+```html
+<div style="background-image: url(fresh.jpg)"></div>
+```
+
+**良い実装**
+
+```html
+<img src="fresh.jpg" alt="FRESH!" />
+```
+
+**困った時**
+
+WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
+
+```
+<div style="background-image: url(fresh.jpg)" role="img" aria-label="FRESH!"></div>
+```
+
+**解説**
+
+- [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
+- [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ###### テスト方法
 
