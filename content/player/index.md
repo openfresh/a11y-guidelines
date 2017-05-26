@@ -137,10 +137,56 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 
 ###### 実装方法 / 解説
 
-1. [色の違いで伝えている情報をテキストでも伝える](http://waic.jp/docs/WCAG-TECHS/G14)
-2. [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
+**良くない例**
 
-解説 : [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+色の違いだけで、必須項目やエラー項目を示す
+
+```html
+<label class="Label -required">電話番号
+<input type="tel" required />
+</label>
+```
+
+```css
+.Label.-required {
+  color: red;
+}
+```
+
+```html
+<p>20文字以上500文字以内で入力してください。</p>
+<textarea></textarea>
+<p><span class="NumCounter__Input -invalid">19</span>/500</p>
+```
+
+```css
+.NumCounter__Input.-invalid {
+  color: red;
+}
+```
+
+**良い例**
+
+色だけでなくテキストでも必須項目やエラーであることを示す
+
+```html
+<label class="Label -required">電話番号（必須）
+<input type="tel" required />
+</label>
+```
+
+```html
+<p>20文字以上500文字以内で入力してください。</p>
+<textarea></textarea>
+<p><span class="NumCounter__Input -invalid">19</span>/500</p>
+<p>入力文字が不足しています。20文字以上入力してください。</p>
+```
+
+**解説**
+
+- [色の違いで伝えている情報をテキストでも伝える](http://waic.jp/docs/WCAG-TECHS/G14)
+- [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
+- [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ##### 1.4.2 音声を制御する
 
