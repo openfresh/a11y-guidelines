@@ -1,19 +1,7 @@
-# FRESH! Accessibility Guidelines
-
-## 概要
-
-FRESH! Accessibility Guidelinesは [FRESH!](https://freshlive.tv)のサービスを利用するすべてのユーザーがコンテンツを楽しみ、そして配信できるようにするための制作指針集である。
-
-FRESH!のサービスに携わるコンテンツ、及びUIの開発者（フロントエンドエンジニア / デザイナーなど）は、高品質なサービスを提供するため、ガイドラインに沿った制作/開発を **強く推奨する**
-
-## 対象
-
-- FRESH! 視聴面 [https://freshlive.tv](https://freshlive.tv)
-- FRESH! 配信管理画面 [https://broadcast.freshlive.tv](https://broadcast.freshlive.tv)
-
-のすべてのページとコンテンツを対象とする。配信管理画面では、管理画面のアクセシビリティと同時に、ユーザーがアクセシブルなコンテンツを提供できるよう努めるが、ユーザーから提供されるコンテンツや情報そのものは本ガイドラインの対象外とする
-
-## 視聴面
+---
+layout: single
+title: 視聴面のガイドライン
+---
 
 ### 1 知覚できる
 
@@ -507,11 +495,3 @@ WAI-ARIA の `role` 属性を使用する場合でも、対応していないUA�
 
 - [名前 (name) ・役割 (role) 及び値 (value) : 達成基準 4.1.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 - [5. The Roles Model : Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#roles)
-
-## [WIP]配信面
-
-TODO : ATAG level Aをベースに作成する
-
-### Make the Authoring tool user interface accessible
-
-### Support the production of accessible content
