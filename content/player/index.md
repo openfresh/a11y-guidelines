@@ -57,18 +57,6 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 2. [aXe](https://www.deque.com/products/axe/) による自動チェック
 3. コードレビューによるチェック
 
-##### 1.1.2 コントロール、入力のテキスト
-
-ユーザーが操作するコントロールや入力を受け付けるUIは、目的を説明する名前をテキストで提供する
-
-###### 実装方法 / 解説
-
-1. [`label`要素を用いてテキストのラベルとフォーム・コントロールを関連付ける](http://waic.jp/docs/WCAG-TECHS/H44)
-2. [`a`要素のリンクの目的を説明するリンクテキストを提供する](http://waic.jp/docs/WCAG-TECHS/H30)
-3. [`aria-label`を用いてオブジェンクとのラベルを提供する](http://www.w3.org/TR/WCAG20-TECHS/ARIA6)
-
-解説 : [達成基準 1.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html#text-equiv-all-situation-c-controls)
-
 #### 1.2 動画、音声メディアに代替コンテンツを提供する
 
 ##### 1.2.1 収録済の音声及び動画に代替コンテンツを提供する
