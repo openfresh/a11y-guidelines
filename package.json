@@ -4,8 +4,8 @@
   "description": "FRESH! Accessibility Guidelines",
   "scripts": {
     "start": "hugo server",
-    "textlint": "textlint draft",
-    "textlint:fix": "textlint --fix draft"
+    "textlint": "textlint content",
+    "textlint:fix": "textlint --fix content"
   },
   "repository": {
     "type": "git",
