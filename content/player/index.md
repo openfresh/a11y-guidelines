@@ -205,7 +205,58 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 
 ###### 実装方法 / 解説
 
-解説 : [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+**良くない例**
+
+現在のFRESH!のカラースキームで推奨コントラスト比を満たしていないの組み合わせ
+<dl>
+<dt><code>--gray</code>と<code>--white</code>のコントラスト比は<em>2.7:1</em></dt>
+<dd><p style="background-color: #9e9e9e;color: white;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt><code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4:1</em></dt>
+<dd><p style="background-color: #333;color: #1a9ebf;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt><code>--white</code>と<code>--blue</code>のコントラスト比は<em>3.1:1</em></dt>
+<dd><p style="background-color: #fff;color: #1a9ebf;padding: 1em;margin-bottom: 1em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, natus, odit. Dolor harum recusandae optio provident temporibus vero possimus quam itaque consequuntur, qui cum officiis at ducimus. Reiciendis quasi, temporibus.</p>
+</dd>
+<dt><code>--gray-deepest</code>と<code>--red</code>のコントラスト比は<em>4:1</em></dt>
+<dd><p style="background-color: #181818;color: #d9402b;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p>
+</dd>
+<dt><code>--gray-darker</code>と<code>--green</code>のコントラスト比は<em>3.7:1</em></dt>
+<dd><p style="background-color: #484848;color: #20bb75;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+**最低限確保できているカラースキームの組み合わせ**
+
+<dl>
+<dt><code>--gray-darker</code>と<code>--white</code>のコントラスト比は<em>9.1:1</em></dt>
+<dd><p style="background-color: #484848;color: white;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt><code>--gray-deep</code>と<code>--blue</code>のコントラスト比は<em>4.6:1</em></dt>
+<dd><p style="background-color: #2a2a2a;color: #1a9ebf;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt><code>--black</code>と<code>--red</code>のコントラスト比は<em>4.7:1</em></dt>
+<dd><p style="background-color: #000;color: #d9402b;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--white</code>と<code>--red</code>のコントラスト比は<em>4.5:1</em></dt>
+<dd><p style="background-color: #fff;color: #d9402b;padding: 1em;margin-bottom: 2em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--gray-darkest</code>と<code>--green</code>のコントラスト比は<em>5.1:1</em></dt>
+<dd><p style="background-color: #333;color: #20bb75;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+**解説**
+
+- [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### 2 操作できる
 
