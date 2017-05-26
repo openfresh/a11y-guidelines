@@ -5,7 +5,7 @@ title: 視聴面のガイドライン
 
 ### 1 知覚できる
 
-情報及びUIは、ユーザーが知覚できる方法でユーザーに提示可能でなければならない
+コンテンツやUIをユーザーが知覚できる方法で提供する
 
 #### 1.1 代替テキスト
 
@@ -15,9 +15,38 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-1. [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
+**良くない実装**
 
-解説 : [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
+`alt` 属性が無い
+
+```html
+<img src="fresh.jpg" />
+```
+
+意味のある画像を背景画像にしている
+
+```html
+<div style="background-image: url(fresh.jpg)"></div>
+```
+
+**良い実装**
+
+```html
+<img src="fresh.jpg" alt="FRESH!" />
+```
+
+**困った時**
+
+WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
+
+```
+<div style="background-image: url(fresh.jpg)" role="img" aria-label="FRESH!"></div>
+```
+
+**解説**
+
+- [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
+- [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ###### テスト方法
 
@@ -27,18 +56,6 @@ title: 視聴面のガイドライン
   3. [eslint-plugin-jsx-a11y/iframe-has-title](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md)
 2. [aXe](https://www.deque.com/products/axe/) による自動チェック
 3. コードレビューによるチェック
-
-##### 1.1.2 コントロール、入力のテキスト
-
-ユーザーが操作するコントロールや入力を受け付けるUIは、目的を説明する名前をテキストで提供する
-
-###### 実装方法 / 解説
-
-1. [`label`要素を用いてテキストのラベルとフォーム・コントロールを関連付ける](http://waic.jp/docs/WCAG-TECHS/H44)
-2. [`a`要素のリンクの目的を説明するリンクテキストを提供する](http://waic.jp/docs/WCAG-TECHS/H30)
-3. [`aria-label`を用いてオブジェンクとのラベルを提供する](http://www.w3.org/TR/WCAG20-TECHS/ARIA6)
-
-解説 : [達成基準 1.1.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html#text-equiv-all-situation-c-controls)
 
 #### 1.2 動画、音声メディアに代替コンテンツを提供する
 
@@ -86,10 +103,29 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-1. [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
-2. [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
+**良くない例**
 
-解説 : [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
+視覚的な位置のみで説明している
+
+`次に進むにはページ右下のボタンをクリックしてください`
+
+形のみで説明している
+
+`OKなら丸いボタンをクリック、キャンセルは四角いボタンをクリックしてください`
+
+**良い例**
+
+形や位置だけでなく、テキストによる説明も付け加える
+
+`次に進むにはページ右下の「次へ」というボタンをクリックしてください。`
+
+`OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャンセルとかかれたボタンをクリックしてください`
+
+**解説**
+
+- [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
+- [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
+- [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
 
 #### 1.4 判別できる
 
@@ -101,10 +137,56 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-1. [色の違いで伝えている情報をテキストでも伝える](http://waic.jp/docs/WCAG-TECHS/G14)
-2. [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
+**良くない例**
 
-解説 : [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+色の違いだけで、必須項目やエラー項目を示す
+
+```html
+<label class="Label -required">電話番号
+<input type="tel" required />
+</label>
+```
+
+```css
+.Label.-required {
+  color: red;
+}
+```
+
+```html
+<p>20文字以上500文字以内で入力してください。</p>
+<textarea></textarea>
+<p><span class="NumCounter__Input -invalid">19</span>/500</p>
+```
+
+```css
+.NumCounter__Input.-invalid {
+  color: red;
+}
+```
+
+**良い例**
+
+色だけでなくテキストでも必須項目やエラーであることを示す
+
+```html
+<label class="Label -required">電話番号（必須）
+<input type="tel" required />
+</label>
+```
+
+```html
+<p>20文字以上500文字以内で入力してください。</p>
+<textarea></textarea>
+<p><span class="NumCounter__Input -invalid">19</span>/500</p>
+<p>入力文字が不足しています。20文字以上入力してください。</p>
+```
+
+**解説**
+
+- [色の違いで伝えている情報をテキストでも伝える](http://waic.jp/docs/WCAG-TECHS/G14)
+- [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
+- [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ##### 1.4.2 音声を制御する
 
@@ -123,7 +205,58 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-解説 : [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+**良くない例**
+
+現在のFRESH!のカラースキームで推奨コントラスト比を満たしていないの組み合わせ
+<dl>
+<dt><code>--gray</code>と<code>--white</code>のコントラスト比は<em>2.7:1</em></dt>
+<dd><p style="background-color: #9e9e9e;color: white;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt><code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4:1</em></dt>
+<dd><p style="background-color: #333;color: #1a9ebf;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt><code>--white</code>と<code>--blue</code>のコントラスト比は<em>3.1:1</em></dt>
+<dd><p style="background-color: #fff;color: #1a9ebf;padding: 1em;margin-bottom: 1em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, natus, odit. Dolor harum recusandae optio provident temporibus vero possimus quam itaque consequuntur, qui cum officiis at ducimus. Reiciendis quasi, temporibus.</p>
+</dd>
+<dt><code>--gray-deepest</code>と<code>--red</code>のコントラスト比は<em>4:1</em></dt>
+<dd><p style="background-color: #181818;color: #d9402b;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p>
+</dd>
+<dt><code>--gray-darker</code>と<code>--green</code>のコントラスト比は<em>3.7:1</em></dt>
+<dd><p style="background-color: #484848;color: #20bb75;padding: 1em;margin-bottom: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+**最低限確保できているカラースキームの組み合わせ**
+
+<dl>
+<dt><code>--gray-darker</code>と<code>--white</code>のコントラスト比は<em>9.1:1</em></dt>
+<dd><p style="background-color: #484848;color: white;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt><code>--gray-deep</code>と<code>--blue</code>のコントラスト比は<em>4.6:1</em></dt>
+<dd><p style="background-color: #2a2a2a;color: #1a9ebf;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt><code>--black</code>と<code>--red</code>のコントラスト比は<em>4.7:1</em></dt>
+<dd><p style="background-color: #000;color: #d9402b;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--white</code>と<code>--red</code>のコントラスト比は<em>4.5:1</em></dt>
+<dd><p style="background-color: #fff;color: #d9402b;padding: 1em;margin-bottom: 2em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--gray-darkest</code>と<code>--green</code>のコントラスト比は<em>5.1:1</em></dt>
+<dd><p style="background-color: #333;color: #20bb75;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+**解説**
+
+- [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### 2 操作できる
 
