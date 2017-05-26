@@ -103,10 +103,29 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 
 ###### 実装方法 / 解説
 
-1. [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
-2. [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
+**良くない例**
 
-解説 : [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
+視覚的な位置のみで説明している
+
+`次に進むにはページ右下のボタンをクリックしてください`
+
+形のみで説明している
+
+`OKなら丸いボタンをクリック、キャンセルは四角いボタンをクリックしてください`
+
+**良い例**
+
+形や位置だけでなく、テキストによる説明も付け加える
+
+`次に進むにはページ右下の「次へ」というボタンをクリックしてください。`
+
+`OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャンセルとかかれたボタンをクリックしてください`
+
+**解説**
+
+- [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
+- [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
+- [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
 
 #### 1.4 判別できる
 
