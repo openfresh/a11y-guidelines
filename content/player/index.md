@@ -263,7 +263,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
 
 1. Sketch デザインデータをプラグインでチェックする
   - [Stark](https://github.com/stark-contrast/stark-sketch-plugin)
-  - [Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser)
+  - [Sketch-Color-Contrast-Analyser](https://github.com/getflourish/Sketch-Color-Contrast-Analyser)
 2. デザインレビューによるチェック
 
 ### 2 操作できる
