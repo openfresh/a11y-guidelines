@@ -266,7 +266,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
   - [Sketch-Color-Contrast-Analyser](https://github.com/getflourish/Sketch-Color-Contrast-Analyser)
 2. デザインレビューによるチェック
 
-※プラグインでは文字サイズと太字の考慮がされないので注意する
+※プラグインでは文字サイズと太字が考慮されないので注意する
 
 ### 2 操作できる
 
