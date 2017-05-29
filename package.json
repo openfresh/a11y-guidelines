@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "FRESH! Accessibility Guidelines",
   "scripts": {
-    "start": "hugo server",
+    "start": "npm run css -- --watch & hugo server",
+    "css": "postcss --use postcss-import --use autoprefixer --use cssnano --output public/css/app.css static/css/app.css",
     "textlint": "textlint content",
     "textlint:fix": "textlint --fix content"
   },
@@ -13,7 +14,14 @@
   },
   "author": "CyberAgent, Inc.",
   "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "cssnano": "^3.10.0",
+    "postcss-cli": "^4.0.0",
+    "postcss-import": "^10.0.0",
     "textlint": "^7.4.0",
     "textlint-rule-preset-japanese": "^1.3.4",
     "textlint-rule-preset-jtf-style": "^2.2.5"
