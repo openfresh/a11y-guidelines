@@ -202,6 +202,7 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 - 装飾的な文字、意味のない文字
 - 操作不可能なUI上のテキスト
 - ロゴタイプ
+- コントラスト比が `3:1` 以上あり、かつ文字サイズが `18pt` 以上の場合
 
 ###### 実装方法 / 解説
 
@@ -257,6 +258,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
 **解説**
 
 - [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+
+###### テスト方法
+
+1. Sketch デザインデータをプラグインでチェックする
+  - [Stark](https://github.com/stark-contrast/stark-sketch-plugin)
+  - [Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser)
+2. デザインレビューによるチェック
 
 ### 2 操作できる
 
