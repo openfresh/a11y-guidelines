@@ -1,6 +1,32 @@
-@import "normalize.css";
+@import "base.css";
 
 .Container {
   margin: 0 auto;
-  width: 960px;
+  padding: 0 1vw;
+  max-width: 90rem;
+  height: 100%;
+}
+
+.Header {
+  height: 6.8rem;
+  background-color: #383838;
+  box-shadow: 0px 2px 8px currentColor;
+}
+
+.Header__Logo {
+  margin: 1rem 0;
+  height: 4.8rem;
+}
+
+.Article {
+  background-color: #fff;
+  border: solid 1px #ededed;
+}
+
+.Article > * {
+  margin: 1em 4vw;
+}
+
+.Footer {
+  background-color: #383838;
 }

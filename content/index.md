@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Home
+title: FRESH! Accessibility Guidelines
 ---
 
 ### 概要
