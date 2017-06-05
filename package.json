@@ -14,9 +14,6 @@
   },
   "author": "CyberAgent, Inc.",
   "license": "MIT",
-  "dependencies": {
-    "normalize.css": "^7.0.0"
-  },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "cssnano": "^3.10.0",

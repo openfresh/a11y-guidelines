@@ -5,18 +5,18 @@
   </head>
 
   <body>
-    <div class="Container">
-      {{ partial "header.html" . }}
+    {{ partial "header.html" . }}
 
-      <main>
-        <article>
-          <h2>{{ .Params.Title }}</h2>
+    <main class="Main">
+      <div class="Container">
+        <h1>{{ .Params.Title }}</h1>
+        <article class="Article">
           {{ .Content }}
         </article>
-      </main>
+      </div>
+    </main>
 
-      {{ partial "footer.html" . }}
-    </div><!-- .Container -->
+    {{ partial "footer.html" . }}
 
     {{ partial "script.html" . }}
   </body>

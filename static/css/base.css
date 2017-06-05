@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+body {
+  font-size: 2rem;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: #00598e;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #673ab7;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+pre, code {
+  font-size: 1.6rem;
+}
