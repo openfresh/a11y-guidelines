@@ -1,4 +1,4 @@
-# a11y-guidelines [![wercker status](https://app.wercker.com/status/b01fe608f19544d4b50057913f5288b2/s/master "wercker status")](https://app.wercker.com/project/byKey/b01fe608f19544d4b50057913f5288b2)
+# a11y-guidelines [![wercker status](https://app.wercker.com/status/b4b783037c39a7399756ddcd1c5e4506/s/master "wercker status")](https://app.wercker.com/project/byKey/b4b783037c39a7399756ddcd1c5e4506)
 
 FRESH! Accessibility Guidelines
 
