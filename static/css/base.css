@@ -15,10 +15,12 @@ body {
 
 h1 {
   font-size: 4rem;
+  line-height: 1.2;
 }
 
 h2 {
   font-size: 3.4rem;
+  line-height: 1.2;
 }
 
 h3 {
