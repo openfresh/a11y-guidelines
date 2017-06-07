@@ -2,20 +2,26 @@
 
 .Container {
   margin: 0 auto;
-  padding: 0 1vw;
+  padding: 0 3.125vw; /* = 10px viewport-width: 320px */
   max-width: 90rem;
   height: 100%;
 }
 
 .Header {
-  height: 6.8rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem 0;
   background-color: #383838;
   box-shadow: 0px 2px 8px currentColor;
 }
 
+.Header a {
+  color: #fff;
+}
+
 .Header__Logo {
-  margin: 1rem 0;
+  margin: 0;
   height: 4.8rem;
+  vertical-align: -0.25em;
 }
 
 .Article {
@@ -24,7 +30,7 @@
 }
 
 .Article > * {
-  margin: 1em 4vw;
+  margin: 1em 3.125vw;
 }
 
 .Outline ol {
