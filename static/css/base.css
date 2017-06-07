@@ -13,6 +13,12 @@ body {
   background-color: #f9f9f9;
 }
 
+@media (max-width: 414px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
 h1 {
   font-size: 4rem;
   line-height: 1.2;
