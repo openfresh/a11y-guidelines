@@ -21,12 +21,13 @@
 .Header {
   margin-bottom: 3rem;
   padding: 1.5rem 0;
+  color: #fff;
   background-color: #383838;
   box-shadow: 0 2px 8px currentColor;
 }
 
 .Header a {
-  color: #fff;
+  color: inherit;
 }
 
 .Header__Logo {
