@@ -1,17 +1,28 @@
+/*
+ * FERSH! Accessibility Guidelines Style
+ *
+ * ## Rule
+ * SUIT CSS naming converntions + Chainable BEM modifiers
+ * .Block__Element.-Modifier
+ *
+ * ## Use Stylelint
+ * https://github.com/openfresh/stylelint-config-fresh
+ */
+
 @import "base.css";
 
 .Container {
-  margin: 0 auto;
-  padding: 0 3.125vw; /* = 10px viewport-width: 320px */
   max-width: 90rem;
   height: 100%;
+  margin: 0 auto;
+  padding: 0 3.125vw; /* = 10px viewport-width: 320px */
 }
 
 .Header {
   margin-bottom: 3rem;
   padding: 1.5rem 0;
   background-color: #383838;
-  box-shadow: 0px 2px 8px currentColor;
+  box-shadow: 0 2px 8px currentColor;
 }
 
 .Header a {
@@ -19,14 +30,14 @@
 }
 
 .Header__Logo {
-  margin: 0;
   height: 4.8rem;
+  margin: 0;
   vertical-align: -0.25em;
 }
 
 .Article {
-  background-color: #fff;
   border: solid 1px #ededed;
+  background-color: #fff;
 }
 
 .Article > * {
@@ -34,8 +45,8 @@
 }
 
 .Outline ol {
-  list-style: none;
   padding-left: 1.7em;
+  list-style: none;
   line-height: 1.7;
 }
 
