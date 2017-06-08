@@ -1,32 +1,44 @@
+/*
+ * FERSH! Accessibility Guidelines Style
+ *
+ * ## Rule
+ * SUIT CSS naming converntions + Chainable BEM modifiers
+ * .Block__Element.-Modifier
+ *
+ * ## Use Stylelint
+ * https://github.com/openfresh/stylelint-config-fresh
+ */
+
 @import "base.css";
 
 .Container {
-  margin: 0 auto;
-  padding: 0 3.125vw; /* = 10px viewport-width: 320px */
   max-width: 90rem;
   height: 100%;
+  margin: 0 auto;
+  padding: 0 3.125vw; /* = 10px viewport-width: 320px */
 }
 
 .Header {
   margin-bottom: 3rem;
   padding: 1.5rem 0;
+  color: #fff;
   background-color: #383838;
-  box-shadow: 0px 2px 8px currentColor;
+  box-shadow: 0 2px 8px currentColor;
 }
 
 .Header a {
-  color: #fff;
+  color: inherit;
 }
 
 .Header__Logo {
-  margin: 0;
   height: 4.8rem;
+  margin: 0;
   vertical-align: -0.25em;
 }
 
 .Article {
-  background-color: #fff;
   border: solid 1px #ededed;
+  background-color: #fff;
 }
 
 .Article > * {
@@ -34,8 +46,8 @@
 }
 
 .Outline ol {
-  list-style: none;
   padding-left: 1.7em;
+  list-style: none;
   line-height: 1.7;
 }
 
@@ -66,6 +78,60 @@
   padding-left: 1.7em;
 }
 
-.Footer {
+.Aside {
+  margin-top: 3rem;
+}
+
+.SocialButtons {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.SocialButtons__Item + .SocialButtons__Item {
+  margin-left: 1em;
+}
+
+.SocialButtons__Item.-GitHubStar > iframe {
+  display: block;
+}
+
+.SocialButtons__Item.-HatenaBookmark > a {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 3px;
   background-color: #383838;
+}
+
+.Footer {
+  margin-top: 3rem;
+  padding: 3rem 0;
+  color: #fff;
+  background-color: #383838;
+}
+
+.Footer a {
+  color: inherit;
+}
+
+.Credit {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.Credit__Logo {
+  flex-grow: 1;
+}
+
+.Credit__Logo a {
+  display: inline-block;
+}
+
+.Credit__Logo img {
+  max-width: 100px;
 }

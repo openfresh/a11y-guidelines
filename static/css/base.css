@@ -1,16 +1,16 @@
 html {
-  font-size: 62.5%;
-  font-family: Lato, Helvetica, Arial, sans-serif;
-  line-height: 1.4;
+  overflow-wrap: break-word;
   box-sizing: border-box;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1.4;
 }
 
 body {
-  font-size: 2rem;
   color: #555;
   background-color: #f9f9f9;
+  font-size: 2rem;
 }
 
 @media (max-width: 414px) {
@@ -46,8 +46,8 @@ h6 {
 }
 
 a {
-  color: #00598e;
   text-decoration: none;
+  color: #00598e;
 }
 
 a:visited {
@@ -58,6 +58,7 @@ code {
   font-family: 'Roboto Mono', monospace;
 }
 
-pre, code {
+pre,
+code {
   font-size: 1.6rem;
 }
