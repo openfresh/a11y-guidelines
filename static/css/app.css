@@ -77,6 +77,35 @@
   padding-left: 1.7em;
 }
 
+.Aside {
+  margin-top: 3rem;
+}
+
+.SocialButtons {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.SocialButtons__Item + .SocialButtons__Item {
+  margin-left: 1em;
+}
+
+.SocialButtons__Item.-GitHubStar > iframe {
+  display: block;
+}
+
+.SocialButtons__Item.-HatenaBookmark > a {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 3px;
+  background-color: #383838;
+}
+
 .Footer {
   margin-top: 3rem;
   padding: 3rem 0;
