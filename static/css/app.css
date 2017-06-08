@@ -78,5 +78,30 @@
 }
 
 .Footer {
+  margin-top: 3rem;
+  padding: 3rem 0;
+  color: #fff;
   background-color: #383838;
+}
+
+.Footer a {
+  color: inherit;
+}
+
+.Credit {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.Credit__Logo {
+  flex-grow: 1;
+}
+
+.Credit__Logo a {
+  display: inline-block;
+}
+
+.Credit__Logo img {
+  max-width: 100px;
 }
