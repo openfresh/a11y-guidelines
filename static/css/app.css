@@ -45,36 +45,84 @@
   margin: 1em 3.125vw;
 }
 
-.Outline ol {
-  padding-left: 1.7em;
+.Article h3,
+.Article h4,
+.Article h5,
+.Article h6 {
+  margin-top: 3em;
+}
+
+.Article h3 + h3,
+.Article h4 + h5,
+.Article h5 + h6,
+.Article h3 + p + h4,
+.Article h4 + p + h5,
+.Article h5 + p + h6 {
+  margin-top: 1em;
+}
+
+h5 {
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #ccc;
+}
+
+.Article h3:target,
+.Article h4:target,
+.Article h5:target,
+.Article h6:target {
+  animation-name: TagetedHeading;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0.3s;
+}
+
+@keyframes TagetedHeading {
+  from {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+ol,
+ul {
+  padding-left: 1.2em;
+}
+
+.Outline {
+  padding-left: 0;
   list-style: none;
   line-height: 1.7;
 }
 
-.Outline ol {
-  padding-left: 0;
-}
-
-.Outline > ol > li {
+.Outline > li {
   font-size: 2.2rem;
   font-weight: bold;
 }
 
-.Outline > ol > li > a {
+.Outline > li > a {
   display: inline-block;
   text-indent: 0.5em;
 }
 
-.Outline > ol > li + li {
+.Outline > li + li {
   margin-top: 0.5em;
 }
 
-.Outline > ol ol {
+.Outline ol {
+  padding-left: 0;
+  list-style: none;
   font-size: 1.8rem;
   font-weight: normal;
 }
 
-.Outline > ol ol ol {
+.Outline ol ol {
   padding-left: 1.7em;
 }
 
