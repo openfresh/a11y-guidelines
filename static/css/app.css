@@ -12,15 +12,15 @@
 @import "base.css";
 
 .Container {
-  max-width: 90rem;
+  max-width: 800px;
   height: 100%;
   margin: 0 auto;
   padding: 0 3.125vw; /* = 10px viewport-width: 320px */
 }
 
 .Header {
-  margin-bottom: 3rem;
-  padding: 1.5rem 0;
+  margin-bottom: 60px;
+  padding: 24px 0;
   color: #fff;
   background-color: #383838;
   box-shadow: 0 2px 8px currentColor;
@@ -31,18 +31,9 @@
 }
 
 .Header__Logo {
-  height: 4.8rem;
+  height: 48px;
   margin: 0;
   vertical-align: -0.25em;
-}
-
-.Article {
-  border: solid 1px #ededed;
-  background-color: #fff;
-}
-
-.Article > * {
-  margin: 1em 3.125vw;
 }
 
 .Article h3,
@@ -50,20 +41,23 @@
 .Article h5,
 .Article h6 {
   margin-top: 3em;
+  margin-bottom: 12px;
 }
 
+.Article h3:first-of-type,
+.Article h2 + h3,
 .Article h3 + h3,
+.Article h3 + h4,
 .Article h4 + h5,
-.Article h5 + h6,
 .Article h3 + p + h4,
 .Article h4 + p + h5,
-.Article h5 + p + h6 {
-  margin-top: 1em;
+.Article h6 {
+  margin-top: 16px;
 }
 
-h5 {
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid #ccc;
+.Article h5 {
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid #e8e8e8;
 }
 
 .Article h3:target,
@@ -90,9 +84,12 @@ h5 {
   }
 }
 
-ol,
-ul {
-  padding-left: 1.2em;
+.Article a {
+  text-decoration: underline;
+}
+
+.Article pre + :not(pre) {
+  margin-top: 30px;
 }
 
 .Outline {
@@ -102,32 +99,40 @@ ul {
 }
 
 .Outline > li {
-  font-size: 2.2rem;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
 .Outline > li > a {
   display: inline-block;
-  text-indent: 0.5em;
+  text-indent: 0.7em;
 }
 
 .Outline > li + li {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .Outline ol {
   padding-left: 0;
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 0.9em;
   font-weight: normal;
 }
 
 .Outline ol ol {
   padding-left: 1.7em;
+  font-size: 1em;
+}
+
+.Article blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  color: #666;
+  border-left: 3px solid #ccc;
 }
 
 .Aside {
-  margin-top: 3rem;
+  margin-top: 60px;
 }
 
 .SocialButtons {
@@ -156,8 +161,8 @@ ul {
 }
 
 .Footer {
-  margin-top: 3rem;
-  padding: 3rem 0;
+  margin-top: 30px;
+  padding: 30px 0;
   color: #fff;
   background-color: #383838;
 }
