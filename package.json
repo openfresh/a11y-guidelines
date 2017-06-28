@@ -9,10 +9,7 @@
     "textlint:fix": "textlint --fix content",
     "lint:css": "stylelint static/css/**/*.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://ghe.ca-tools.org/VALENCIA/a11y-guidelines.git"
-  },
+  "repository": "openfresh/a11y-guidelines",
   "author": "CyberAgent, Inc.",
   "license": "MIT",
   "devDependencies": {
