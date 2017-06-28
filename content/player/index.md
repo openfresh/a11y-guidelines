@@ -5,6 +5,8 @@ title: 視聴面のガイドライン
 
 ユーザーが生放送を視聴する[視聴面](https://freshlive.tv)に関するガイドライン。<abbr title="Web Contents Accessibility Guidelines">WCAG</abbr>2.1がベースとなっている。
 
+**※ガイドライン中のプログラムのコード例は、分かりやすさのため本来は必要な記述を省略していることがある。コード例をそのまま使用しないように注意すること。**
+
 {{< wrapper >}}
 <details>
 <summary>目次</summary>
