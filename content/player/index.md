@@ -14,19 +14,25 @@ title: 視聴面のガイドライン
 
 ### 1 知覚できる
 
-コンテンツやUIをユーザーが知覚できる方法で提供する
+コンテンツやUIをユーザーが知覚できる方法で提供する。
 
 #### 1.1 代替テキスト
 
 ##### 1.1.1 画像に代替テキストを提供する
 
-非テキストコンテンツ（画像など）には代替テキストを提供する
+###### ガイドラインの意図
+
+装飾ではないコンテンツとして画像には、その画像の代わりとなるテキスト（代替テキスト）を提供する。
+
+- 視覚以外で情報を得ているユーザーへの情報提供
+- 画像の配信、取得に失敗した際の代替コンテンツとして
+- 画像検索などのサーチボットへのヒントとして
 
 ###### 実装方法 / 解説
 
 **良くない実装**
 
-`alt` 属性が無い
+`img` 要素に `alt` 属性が無い
 
 ```html
 <img src="fresh.jpg" />
@@ -40,22 +46,27 @@ title: 視聴面のガイドライン
 
 **良い実装**
 
+`img` 要素の `alt` 属性に代替するテキストを設定している
+
 ```html
 <img src="fresh.jpg" alt="FRESH!" />
 ```
 
 **困った時**
 
-WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
+<abbr title="Web Accessibility Initiative Accessible Rich Internet Applications">WAI-ARIA</abbr> の `aria-label` 属性を使用する。
 
-```
-<div style="background-image: url(fresh.jpg)" role="img" aria-label="FRESH!"></div>
+```html
+<div style="background-image: url(fresh.jpg)" aria-label="FRESH!" role="img"></div>
 ```
 
 **解説**
 
 - [`img` 要素には `alt` 属性で代替テキストを提供する](http://waic.jp/docs/WCAG-TECHS/H37)
 - [非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [altはつけるだけじゃなくて | 実践アクセシブルHTML 第一回](http://yuugop.com/articles/practicalaccessiblehtml/pah01.html)
+
+※入力欄やボタンについては [3.3.2 入力欄のラベルまたは説明](#3-3-2-入力欄のラベルまたは説明) を参照のこと
 
 ###### テスト方法
 
