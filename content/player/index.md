@@ -70,14 +70,13 @@ title: 視聴面のガイドライン
 
 ※入力欄やボタンについては [3.3.2 入力欄のラベルまたは説明](#3-3-2-入力欄のラベルまたは説明) を参照のこと
 
-###### テスト方法
+###### テスト・チェック方法
 
 1. ESlintによる自動チェック
   1. [eslint-plugin-jsx-a11y/accessible-emoji](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md)
   2. [eslint-plugin-jsx-a11y/img-has-alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md)
   3. [eslint-plugin-jsx-a11y/iframe-has-title](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md)
-2. [aXe](https://www.deque.com/products/axe/) による自動チェック
-3. コードレビューによるチェック
+2. コードレビューによるチェック
 
 #### 1.2 動画、音声に代替コンテンツを提供する
 
@@ -127,10 +126,22 @@ title: 視聴面のガイドライン
 
 ###### 実装方法 / 解説
 
-1. 適切な要素を用いてマークアップする。次に例として挙げるのは代表的な例でこれに限らない。
-  1.1 [見出しを特定するために、h1 要素～ h6 要素を使用する](http://waic.jp/docs/WCAG-TECHS/H42.html)
-  1.2 [リストは `ul` , `ol` , `dl` を用いる](http://waic.jp/docs/WCAG-TECHS/H48.html)
-  1.3 [表の情報を提示するために、テーブルのマークアップを使用する](http://waic.jp/docs/WCAG-TECHS/H51.html)
+**解説**
+
+「プログラムによる解釈ができる」は、主にブラウザやサーチボットなどのUA（ユーザーエージェント）が理解できるか、と考えて良い。
+
+**実装方法**
+
+適切な要素を用いてマークアップし、適切な属性を使用する。次に挙げるのは代表的な例で以下に限らない。
+
+- [見出しを特定するために、h1 要素～ h6 要素を使用する](http://waic.jp/docs/WCAG-TECHS/H42.html)
+- [リストは `ul` , `ol` , `dl` を用いる](http://waic.jp/docs/WCAG-TECHS/H48.html)
+- [表の情報を提示するために、テーブルのマークアップを使用する](http://waic.jp/docs/WCAG-TECHS/H51.html)
+
+###### テスト・チェック方法
+
+- コードレビューによるチェック
+
 
 解説 : [情報及び関係性:達成基準 1.3.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -144,6 +155,10 @@ title: 視聴面のガイドライン
 2. [単語内の文字間を空けるためなど、文書の整形にスペースを利用](http://waic.jp/docs/WCAG-TECHS/F32.html)しない
 
 解説 : [意味のある順序:達成基準 1.3.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+
+###### テスト・チェック方法
+
+- コードレビューによるチェック
 
 ##### 1.3.3 感覚的な特徴に依存しない
 
@@ -174,6 +189,10 @@ title: 視聴面のガイドライン
 - [UIやコンテンツについて形、または位置のみで特定](http://waic.jp/docs/WCAG-TECHS/F14)しない
 - [UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。](http://waic.jp/docs/WCAG-TECHS/G96)
 - [感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html)
+
+###### テスト・チェック方法
+
+- デザインレビューによるチェック
 
 #### 1.4 判別できる
 
@@ -236,12 +255,21 @@ title: 視聴面のガイドライン
 - [色と模様、記号を併用する](http://waic.jp/docs/WCAG-TECHS/G111)
 - [色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
+###### テスト・チェック方法
+
+- デザインレビューによるチェック
+
 ##### 1.4.2 音声を制御する
 
 可能な限り音声を自動的に再生しない。音声が自動的に再生される場合は、音声を停止、またはコンテンツの音量を調整できるメカニズムを提供する。
 
 1. [ユーザーが望む（と予想できる）際に限って音声を自動的に再生する](http://waic.jp/docs/WCAG-TECHS/G171)
 2. 動画プレイヤーには音声の調整ボタン、ミュートボタンを搭載する
+
+###### テスト・チェック方法
+
+- 仕様策定段階での機能確認
+- デザインレビューによるチェック
 
 ##### 1.4.3 コントラストを確保する
 
@@ -316,7 +344,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
 
 - [コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-###### テスト方法
+###### テスト・チェック方法
 
 1. Sketch デザインデータをプラグインでチェックする
   - [Stark](https://github.com/stark-contrast/stark-sketch-plugin)
@@ -371,6 +399,14 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 
 ※ドラッグ&amp;ドロップ操作は軌跡に依存しないので、この例外には当てはまらない
 
+###### テスト・チェック方法
+
+- ESlintによる自動チェック
+  - [eslint-plugin-jsx-a11y/interactive-supports-focus](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/interactive-supports-focus.md)
+  - [eslint-plugin-jsx-a11y/mouse-events-have-key-events](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md)
+- コードレビューによるチェック
+- QAテスト（マウスと同じ操作がキーボードで可能かどうか）
+
 ##### 2.1.2 シンプルな操作で操作できるようにする
 
 コンテンツやUIのすべての機能は、複雑な操作に依存せずシンプルな操作で操作できるようにする。
@@ -418,6 +454,11 @@ iOS のフォースタッチでのみ動作するメニュー
 ###### 例外
 
 - 文章中のテキストリンク（※ただし、十分なフォントサイズを確保し、読みやすさだけでなく操作のしやすさも確保する）
+
+###### テスト・チェック方法
+
+- デザインレビューによるチェック
+- コードレビューによるチェック
 
 #### 2.2 十分な時間
 
