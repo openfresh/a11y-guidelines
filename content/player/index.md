@@ -420,7 +420,7 @@ UIコンポーネント及びナビゲーションは操作可能でなければ
 </button>
 ```
 
-1. [HTMLのフォームコントロール、及びリンクを使用する](http://waic.jp/docs/WCAG-TECHS/H91)
+[HTMLのフォームコントロール、及びリンクを使用する](http://waic.jp/docs/WCAG-TECHS/H91)
 
 **解説**
 
