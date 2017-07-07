@@ -3,11 +3,13 @@ layout: single
 title: 視聴面のガイドライン
 ---
 
-
+{{< wrapper >}}
 <details>
 <summary>目次</summary>
 {{< outlineplayer >}}
 </details>
+{{< /wrapper >}}
+
 ### 1 知覚できる
 
 コンテンツやUIをユーザーが知覚できる方法で提供する
@@ -214,6 +216,9 @@ WAI-ARIA の `role` 属性、`aria-label` 属性を使用する
 **良くない例**
 
 現在のFRESH!のカラースキームで推奨コントラスト比を満たしていないの組み合わせ
+
+{{< wrapper class="color-scheme" >}}
+
 <dl>
 <dt><code>--gray</code>と<code>--white</code>のコントラスト比は<em>2.7:1</em></dt>
 <dd><p style="background-color: #9e9e9e;color: white;padding: 1em;margin-bottom: 1em;">
@@ -237,7 +242,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
 </dd>
 </dl>
 
+{{< /wrapper >}}
+
 **最低限確保できているカラースキームの組み合わせ**
+
+{{< wrapper class="color-scheme" >}}
 
 <dl>
 <dt><code>--gray-darker</code>と<code>--white</code>のコントラスト比は<em>9.1:1</em></dt>
@@ -259,6 +268,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
 </dd>
 </dl>
+
+{{< /wrapper >}}
 
 **解説**
 

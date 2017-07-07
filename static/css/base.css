@@ -67,3 +67,8 @@ ul {
 li {
   margin: 0.25em 0;
 }
+
+iframe {
+  overflow: hidden;
+  border: 0;
+}
