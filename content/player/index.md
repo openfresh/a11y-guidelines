@@ -313,23 +313,35 @@ OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャ�
 
 <dl>
 <dt><code>--gray</code>と<code>--white</code>のコントラスト比は<em>2.7:1</em></dt>
-<dd><p style="background-color: #9e9e9e;color: white;padding: 1em;margin-bottom: 1em;">
+<dd><p style="background-color: #9e9e9e;color: white;padding: 1em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
 </p></dd>
-<dt><code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4:1</em></dt>
-<dd><p style="background-color: #333;color: #1a9ebf;padding: 1em;margin-bottom: 1em;">
+<dt>
+<code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #333;color: #1a9ebf;padding: 1em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
 </dd>
-<dt><code>--white</code>と<code>--blue</code>のコントラスト比は<em>3.1:1</em></dt>
-<dd><p style="background-color: #fff;color: #1a9ebf;padding: 1em;margin-bottom: 1em;border: 1px solid;">
+<dt>
+<code>--white</code>と<code>--blue</code>のコントラスト比は<em>3.1:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #fff;color: #1a9ebf;padding: 1em;border: 1px solid;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, natus, odit. Dolor harum recusandae optio provident temporibus vero possimus quam itaque consequuntur, qui cum officiis at ducimus. Reiciendis quasi, temporibus.</p>
 </dd>
-<dt><code>--gray-deepest</code>と<code>--red</code>のコントラスト比は<em>4:1</em></dt>
-<dd><p style="background-color: #181818;color: #d9402b;padding: 1em;margin-bottom: 1em;">
+<dt>
+<code>--gray-deepest</code>と<code>--red</code>のコントラスト比は<em>4:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #181818;color: #d9402b;padding: 1em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p>
 </dd>
-<dt><code>--gray-darker</code>と<code>--green</code>のコントラスト比は<em>3.7:1</em></dt>
-<dd><p style="background-color: #484848;color: #20bb75;padding: 1em;margin-bottom: 1em;">
+<dt>
+<code>--gray-darker</code>と<code>--green</code>のコントラスト比は<em>3.7:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #484848;color: #20bb75;padding: 1em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
 </dd>
 </dl>
