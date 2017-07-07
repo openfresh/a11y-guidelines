@@ -732,6 +732,10 @@ HTMLで定義されている要素を使用する。HTMLに適切な要素がな
 <button className="Button">button</button>
 ```
 
+```html
+<button role="tab" className="Tab">Tab</button>
+```
+
 **解説**
 
 - [名前 (name) ・役割 (role) 及び値 (value) : 達成基準 4.1.2 を理解する | WCAG 2.0解説書](http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
