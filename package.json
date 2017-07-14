@@ -1,13 +1,21 @@
 {
   "name": "a11y-guidelines",
+  "private": true,
   "version": "0.0.1",
   "description": "FRESH! Accessibility Guidelines",
+  "config": {
+    "postcssPlugins": "--use postcss-import --use autoprefixer --use cssnano"
+  },
   "scripts": {
-    "start": "npm run css -- --watch & hugo server",
-    "css": "postcss --use postcss-import --use autoprefixer --use cssnano --output public/css/app.css static/css/app.css",
+    "watch": "npm-run-all -p watch:*",
+    "watch:md": "hugo server",
+    "watch:css": "npm run build:css -- --watch",
+    "build": "npm run build:css",
+    "build:css": "postcss $npm_package_config_postcssPlugins --output public/css/app.css static/css/app.css",
+    "test": "npm run textlint && npm run stylelint",
     "textlint": "textlint content",
     "textlint:fix": "textlint --fix content",
-    "lint:css": "stylelint static/css/**/*.css"
+    "stylelint": "stylelint static/css/**/*.css"
   },
   "repository": "openfresh/a11y-guidelines",
   "author": "CyberAgent, Inc.",
@@ -15,6 +23,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "cssnano": "^3.10.0",
+    "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.0.0",
     "postcss-import": "^10.0.0",
     "stylelint": "^7.10.1",
