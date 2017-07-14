@@ -11,5 +11,4 @@ deploy:
   steps:
     - lukevivier/gh-pages@0.2.1:
         token: $GITHUB_TOKEN
-        domain: openfresh.github.io
         basedir: public
