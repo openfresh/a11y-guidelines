@@ -755,7 +755,7 @@ HTML、及び構築するDOMは、要素には完全な開始タグ及び終了�
 HTMLにある要素を利用せず、`<div>` や `<span>` を利用する。
 
 ```html
-<span className="Button">button</span>
+<span class="Button">button</span>
 ```
 
 **良い実装例**
@@ -763,11 +763,11 @@ HTMLにある要素を利用せず、`<div>` や `<span>` を利用する。
 HTMLで定義されている要素を使用する。HTMLに適切な要素がない場合、WAI-ARIA で定義されている `role`属性で適切なものがあればそれを指定する。
 
 ```html
-<button className="Button">button</button>
+<button class="Button">button</button>
 ```
 
 ```html
-<button role="tab" className="Tab">Tab</button>
+<button role="tab" class="Tab">Tab</button>
 ```
 
 **解説**
