@@ -6,13 +6,13 @@
 
 リンク先のミス、誤字・脱字、WCAGの解釈の間違いなどのご指摘、Pull Request は歓迎です。
 
-Only FRESH! member can Pull Request that make new guideline, test method, example, case.
+Only fresh members can create pull requests for new guidelines, specific fixes, tests and examples.
 
-But, Pull Request is welcomed, such as mistakes in the link, typo, mistakes in interpreting WCAG, etc.
+But, pull requests are welcomed for fixing links, typos, WCAG interpretations, etc.
 
-### How Do I Contribute?
+### How to contribute?
 
 #### Branch naming rule
 
-- New guidelines, feature, test method, example, case : `feature/*`
+- New guidelines, features, test methods, examples, cases : `feature/*`
 - Fix something : `fix/*` or `patch/*`
