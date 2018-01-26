@@ -3,7 +3,7 @@ build:
   steps:
     - npm-install
     - arjen/hugo-build:
-        version: "0.24.1"
+        version: "0.35"
     - script:
         name: Build static files
         code: npm run build
