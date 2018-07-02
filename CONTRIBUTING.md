@@ -1,8 +1,8 @@
-## Contributing to FRESH! Accessibility Guidelines
+## Contributing to FRESH LIVE Accessibility Guidelines
 
 ### How Can I Contribute?
 
-新しいガイドラインの作成や意図の修正、テスト方法や事例の追加に関するPull RequestはFRESH!在籍メンバーのみ可能です。それに該当するPull Request, issueの作成はご遠慮ください。
+新しいガイドラインの作成や意図の修正、テスト方法や事例の追加に関するPull RequestはFRESH LIVE在籍メンバーのみ可能です。それに該当するPull Request, issueの作成はご遠慮ください。
 
 リンク先のミス、誤字・脱字、WCAGの解釈の間違いなどのご指摘、Pull Request は歓迎です。
 

@@ -51,7 +51,7 @@ title: 視聴面のガイドライン
 `<img>` 要素の `alt` 属性に代替するテキストを設定している。
 
 ```html
-<img src="fresh.jpg" alt="FRESH!" />
+<img src="fresh.jpg" alt="FRESH LIVE" />
 ```
 
 **困った時**
@@ -59,7 +59,7 @@ title: 視聴面のガイドライン
 <abbr title="Web Accessibility Initiative Accessible Rich Internet Applications">WAI-ARIA</abbr> の `aria-label` 属性を使用する。
 
 ```html
-<div style="background-image: url(fresh.jpg)" aria-label="FRESH!" role="img"></div>
+<div style="background-image: url(fresh.jpg)" aria-label="FRESH LIVE" role="img"></div>
 ```
 
 **解説**
@@ -307,7 +307,7 @@ OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャ�
 
 **良くない例**
 
-現在のFRESH!のカラースキームで推奨コントラスト比を満たしていないの組み合わせ。
+現在のFRESH LIVEのカラースキームで推奨コントラスト比を満たしていないの組み合わせ。
 
 {{< wrapper class="color-scheme" >}}
 
@@ -317,17 +317,17 @@ OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャ�
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
 </p></dd>
 <dt>
-<code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4:1</em>
+<code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4.2:1</em>
 <small>※太字 or 大きな文字サイズであればOK</small>
 </dt>
-<dd><p style="background-color: #333;color: #1a9ebf;padding: 1em;">
+<dd><p style="background-color: #333;color: #00a0d6;padding: 1em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
 </dd>
 <dt>
-<code>--white</code>と<code>--blue</code>のコントラスト比は<em>3.1:1</em>
+<code>--white</code>と<code>--blue</code>のコントラスト比は<em>3:1</em>
 <small>※太字 or 大きな文字サイズであればOK</small>
 </dt>
-<dd><p style="background-color: #fff;color: #1a9ebf;padding: 1em;border: 1px solid;">
+<dd><p style="background-color: #fff;color: #00a0d6;padding: 1em;border: 1px solid;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, natus, odit. Dolor harum recusandae optio provident temporibus vero possimus quam itaque consequuntur, qui cum officiis at ducimus. Reiciendis quasi, temporibus.</p>
 </dd>
 <dt>
@@ -357,8 +357,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut n
 <dd><p style="background-color: #484848;color: white;padding: 1em;margin-bottom: 2em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
 </p></dd>
-<dt><code>--gray-deep</code>と<code>--blue</code>のコントラスト比は<em>4.6:1</em></dt>
-<dd><p style="background-color: #2a2a2a;color: #1a9ebf;padding: 1em;margin-bottom: 2em;">
+<dt><code>--gray-deep</code>と<code>--blue</code>のコントラスト比は<em>4.78:1</em></dt>
+<dd><p style="background-color: #2a2a2a;color: #00a0d6;padding: 1em;margin-bottom: 2em;">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
 </dd>
 <dt><code>--black</code>と<code>--red</code>のコントラスト比は<em>4.7:1</em></dt>
@@ -525,7 +525,7 @@ iOS のフォースタッチでのみ動作するメニュー。
 
 ##### 2.2.2 自動再生するコンテンツを一時停止、停止、非表示にできるようにする
 
-動きのあるコンテンツが自動的に開始され、また他のコンテンツと並行して表示される場合、ユーザーが一時停止、停止、または非表示にできるようにする。
+動きのあるコンテンツが自動で開始され、また他のコンテンツと並行して表示される場合、ユーザーが一時停止、停止、または非表示にできるようにする。
 
 ###### 実装方法 / 解説
 

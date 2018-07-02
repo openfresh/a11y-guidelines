@@ -1,5 +1,5 @@
 /*
- * FERSH! Accessibility Guidelines Style
+ * FERSH LIVE Accessibility Guidelines Style
  *
  * ## Rule
  * SUIT CSS naming converntions + Chainable BEM modifiers
@@ -26,14 +26,21 @@
   box-shadow: 0 2px 8px currentColor;
 }
 
+.Header h1 {
+  font-size: 2.2em;
+  font-weight: normal;
+}
+
 .Header a {
+  display: inline-flex;
+  align-items: center;
   color: inherit;
 }
 
 .Header__Logo {
   height: 48px;
-  margin: 0;
-  vertical-align: -0.25em;
+  margin: 0 12px 0 0;
+  transform: translateY(1px);
 }
 
 .Article h3,
@@ -44,20 +51,20 @@
   margin-bottom: 12px;
 }
 
-.Article h3:first-of-type,
+.Article h5 {
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid #e8e8e8;
+}
+
 .Article h2 + h3,
 .Article h3 + h3,
 .Article h3 + h4,
 .Article h4 + h5,
 .Article h3 + p + h4,
 .Article h4 + p + h5,
-.Article h6 {
+.Article h6,
+.Article h3:first-of-type, {
   margin-top: 16px;
-}
-
-.Article h5 {
-  padding-bottom: 0.25em;
-  border-bottom: 2px solid #e8e8e8;
 }
 
 .Article h3:target,
