@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://openfresh.github.io/a11y-guidelines/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://openfresh.github.io/a11y-guidelines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://openfresh.github.io/a11y-guidelines/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://openfresh.github.io/a11y-guidelines/player/</loc>
+  </url>
+  
+</urlset>

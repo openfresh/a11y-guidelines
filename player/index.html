@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>視聴面のガイドライン - FRESH LIVE Accessibility Guidelines</title>
+
+<link rel="icon" href="https://openfresh.github.io/a11y-guidelines/favicon.png">
+<link rel="shortcut icon" href="https://openfresh.github.io/a11y-guidelines/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+<link rel="stylesheet" href="https://openfresh.github.io/a11y-guidelines/css/app.css">
+
+<meta property="og:description" content="">
+<meta property="og:image" content="https://openfresh.github.io/a11y-guidelines/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://openfresh.github.io/a11y-guidelines/player/">
+<meta property="og:site_name" content="FRESH LIVE Accessibility Guidelines">
+<meta property="og:title" content="視聴面のガイドライン">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FRESH_STAFF">
+<meta name="twitter:url" content="https://openfresh.github.io/a11y-guidelines/player/">
+<meta name="twitter:title" content="視聴面のガイドライン">
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://openfresh.github.io/a11y-guidelines/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://openfresh.github.io/a11y-guidelines/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://openfresh.github.io/a11y-guidelines/img/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="https://openfresh.github.io/a11y-guidelines/img/apple-touch-icon.png">
+
+  </head>
+
+  <body>
+    <header class="Header">
+  <h1 class="Container">
+    <a href="https://openfresh.github.io/a11y-guidelines">
+    <img src="https://openfresh.github.io/a11y-guidelines/img/logo.svg" class="Header__Logo" alt="FRESH LIVE" />
+    <span style="display: inline-block;">Accessibility Guidelines</span>
+    </a>
+  </h1>
+</header>
+
+
+    <main class="Main">
+      <div class="Container">
+        <article class="Article">
+          <h2>視聴面のガイドライン</h2>
+          
+
+<p>ユーザーが生放送を視聴する<a href="https://freshlive.tv">視聴面</a>に関するガイドライン。<abbr title="Web Contents Accessibility Guidelines">WCAG</abbr>2.1がベースとなっている。</p>
+
+<p><strong>※ガイドライン中のプログラムのコード例は、分かりやすさのため本来は必要な記述を省略していることがある。コード例をそのまま使用しないように注意すること。</strong></p>
+
+<div>
+
+<details>
+<summary>目次</summary>
+<ol class="Outline -player">
+<li>1 <a href="/a11y-guidelines/player/#1-知覚できる">知覚できる</a>
+  <ol>
+    <li>1.1 <a href="/a11y-guidelines/player/#1-1-代替テキスト">代替テキスト</a>
+      <ol>
+        <li>1.1.1 <a href="/a11y-guidelines/player/#1-1-1-画像に代替テキストを提供する">画像に代替テキストを提供する</a></li>
+      </ol>
+    </li>
+    <li>1.2 <a href="/a11y-guidelines/player/#1-2-動画-音声に代替コンテンツを提供する">動画、音声に代替コンテンツを提供する</a>
+      <ol>
+        <li>1.2.1 <a href="/a11y-guidelines/player/#1-2-1-収録済の音声及び動画に代替コンテンツを提供する">収録済の音声及び動画に代替コンテンツを提供する</a></li>
+      </ol>
+    </li>
+    <li>1.3 <a href="/a11y-guidelines/player/#1-3-様々な閲覧環境に適応できるようにする">様々な閲覧環境に適応できるようにする</a>
+      <ol>
+        <li>1.3.1 <a href="/a11y-guidelines/player/#1-3-1-情報及び関係性">情報及び関係性</a></li>
+        <li>1.3.2 <a href="/a11y-guidelines/player/#1-3-2-意味のある順序">意味のある順序</a></li>
+        <li>1.3.3 <a href="/a11y-guidelines/player/#1-3-3-感覚的な特徴に依存しない">感覚的な特徴に依存しない</a></li>
+      </ol>
+    </li>
+    <li>1.4 <a href="/a11y-guidelines/player/#1-4-判別できる">判別できる</a>
+      <ol>
+        <li>1.4.1 <a href="/a11y-guidelines/player/#1-4-1-色だけで伝えない">色だけで伝えない</a></li>
+        <li>1.4.2 <a href="/a11y-guidelines/player/#1-4-2-音声を制御する">音声を制御する</a></li>
+        <li>1.4.3 <a href="/a11y-guidelines/player/#1-4-3-コントラストを確保する">コントラストを確保する</a></li>
+      </ol>
+    </li>
+  </ol>
+</li>
+<li>2 <a href="/a11y-guidelines/player/#2-操作できる">操作できる</a>
+  <ol>
+    <li>2.1 <a href="/a11y-guidelines/player/#2-1-さまざまなデバイスでの操作">さまざまなデバイスでの操作</a>
+      <ol>
+        <li>2.1.1 <a href="/a11y-guidelines/player/#2-1-1-キーボード-タッチデバイスでの操作">キーボード、タッチデバイスでの操作</a></li>
+        <li>2.1.2 <a href="/a11y-guidelines/player/#2-1-2-シンプルな操作で操作できるようにする">シンプルな操作で操作できるようにする</a></li>
+        <li>2.1.3 <a href="/a11y-guidelines/player/#2-1-3-特定のデバイスの機能に依存しない">特定のデバイスの機能に依存しない</a></li>
+        <li>2.1.4 <a href="/a11y-guidelines/player/#2-1-4-タッチターゲットサイズ">タッチターゲットサイズ</a></li>
+      </ol>
+    </li>
+    <li>2.2 <a href="/a11y-guidelines/player/#2-2-十分な時間">十分な時間</a>
+      <ol>
+        <li>2.2.1 <a href="/a11y-guidelines/player/#2-2-1-コンテンツの制限時間">コンテンツの制限時間</a></li>
+        <li>2.2.2 <a href="/a11y-guidelines/player/#2-2-2-自動再生するコンテンツを一時停止-停止-非表示にできるようにする">自動再生するコンテンツを一時停止、停止、非表示にできるようにする</a></li>
+      </ol>
+    </li>
+    <li>2.3 <a href="/a11y-guidelines/player/#2-3-発作の防止">発作の防止</a>
+      <ol>
+        <li>2.3.1 <a href="/a11y-guidelines/player/#2-3-1-フラッシュさせない">フラッシュさせない</a></li>
+      </ol>
+    </li>
+    <li>2.4 <a href="/a11y-guidelines/player/#2-4-ナビゲーション">ナビゲーション</a>
+      <ol>
+        <li>2.4.1 <a href="/a11y-guidelines/player/#2-4-1-繰り返す情報のスキップ">繰り返す情報のスキップ</a></li>
+        <li>2.4.2 <a href="/a11y-guidelines/player/#2-4-2-ページタイトル">ページタイトル</a></li>
+      </ol>
+    </li>
+  </ol>
+</li>
+<li>3 <a href="/a11y-guidelines/player/#3-理解できる">理解できる</a>
+  <ol>
+    <li>3.1 <a href="/a11y-guidelines/player/#3-1-読みやすさ">読みやすさ</a>
+      <ol>
+        <li>3.1.1 <a href="/a11y-guidelines/player/#3-1-1-ページの言語">ページの言語</a></li>
+      </ol>
+    </li>
+    <li>3.2 <a href="/a11y-guidelines/player/#3-2-予測できる">予測できる</a>
+      <ol>
+        <li>3.2.1 <a href="/a11y-guidelines/player/#3-2-1-ユーザーの意図しない変更をしない">ユーザーの意図しない変更をしない</a></li>
+      </ol>
+    </li>
+    <li>3.3 <a href="/a11y-guidelines/player/#3-3-入力を支援する">入力を支援する</a>
+      <ol>
+        <li>3.3.1 <a href="/a11y-guidelines/player/#3-3-1-エラーの特定">エラーの特定</a></li>
+        <li>3.3.2 <a href="/a11y-guidelines/player/#3-3-2-入力欄のラベルまたは説明">入力欄のラベルまたは説明</a></li>
+      </ol>
+    </li>
+  </ol>
+</li>
+<li>4 <a href="/a11y-guidelines/player/#4-堅牢性">堅牢性</a>
+  <ol>
+    <li>4.1 <a href="/a11y-guidelines/player/#4-1-互換性">互換性</a>
+      <ol>
+        <li>4.1.1 <a href="/a11y-guidelines/player/#4-1-1-構文解析">構文解析</a></li>
+        <li>4.1.2 <a href="/a11y-guidelines/player/#4-1-2-名前-役割-及び値">名前・役割、及び値</a></li>
+      </ol>
+    </li>
+  </ol>
+</li>
+</ol>
+
+</details>
+
+</div>
+
+
+<h3 id="1-知覚できる">1 知覚できる</h3>
+
+<p>コンテンツやUIをユーザーが知覚できる方法で提供する。</p>
+
+<h4 id="1-1-代替テキスト">1.1 代替テキスト</h4>
+
+<h5 id="1-1-1-画像に代替テキストを提供する">1.1.1 画像に代替テキストを提供する</h5>
+
+<h6 id="ガイドラインの意図">ガイドラインの意図</h6>
+
+<p>装飾ではないコンテンツとしての画像には、その画像の代わりとなるテキスト（代替テキスト）を提供する。</p>
+
+<ul>
+<li>視覚以外で情報を得ているユーザーへの情報提供</li>
+<li>画像の配信、取得に失敗した際の代替コンテンツとして</li>
+<li>画像検索などのサーチボットへのヒントとして</li>
+</ul>
+
+<h6 id="実装方法-解説">実装方法 / 解説</h6>
+
+<p><strong>良くない実装</strong></p>
+
+<p><code>&lt;img&gt;</code> 要素に <code>alt</code> 属性が無い。</p>
+
+<pre><code class="language-html">&lt;img src=&quot;fresh.jpg&quot; /&gt;
+</code></pre>
+
+<p>意味のある画像を背景画像にしている。</p>
+
+<pre><code class="language-html">&lt;div style=&quot;background-image: url(fresh.jpg)&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p><strong>良い実装</strong></p>
+
+<p><code>&lt;img&gt;</code> 要素の <code>alt</code> 属性に代替するテキストを設定している。</p>
+
+<pre><code class="language-html">&lt;img src=&quot;fresh.jpg&quot; alt=&quot;FRESH LIVE&quot; /&gt;
+</code></pre>
+
+<p><strong>困った時</strong></p>
+
+<p><abbr title="Web Accessibility Initiative Accessible Rich Internet Applications">WAI-ARIA</abbr> の <code>aria-label</code> 属性を使用する。</p>
+
+<pre><code class="language-html">&lt;div style=&quot;background-image: url(fresh.jpg)&quot; aria-label=&quot;FRESH LIVE&quot; role=&quot;img&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/H37"><code>img</code> 要素には <code>alt</code> 属性で代替テキストを提供する</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">非テキストコンテンツ:達成基準 1.1.1 を理解する | WCAG2.0解説書</a></li>
+<li><a href="http://yuugop.com/articles/practicalaccessiblehtml/pah01.html">altはつけるだけじゃなくて | 実践アクセシブルHTML 第一回</a></li>
+</ul>
+
+<p>※入力欄やボタンについては <a href="#3-3-2-入力欄のラベルまたは説明">3.3.2 入力欄のラベルまたは説明</a> を参照のこと</p>
+
+<h6 id="テスト-チェック方法">テスト・チェック方法</h6>
+
+<ol>
+<li>ESlintによる自動チェック
+
+<ol>
+<li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md">eslint-plugin-jsx-a11y/accessible-emoji</a></li>
+<li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md">eslint-plugin-jsx-a11y/img-has-alt</a></li>
+<li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/iframe-has-title.md">eslint-plugin-jsx-a11y/iframe-has-title</a></li>
+</ol></li>
+<li>コードレビューによるチェック</li>
+</ol>
+
+<h4 id="1-2-動画-音声に代替コンテンツを提供する">1.2 動画、音声に代替コンテンツを提供する</h4>
+
+<h5 id="1-2-1-収録済の音声及び動画に代替コンテンツを提供する">1.2.1 収録済の音声及び動画に代替コンテンツを提供する</h5>
+
+<h6 id="ガイドラインの意図-1">ガイドラインの意図</h6>
+
+<ul>
+<li>視覚的なコンテンツを見ることができない環境での利用やユーザーに役立つ
+
+<ul>
+<li>テキストデータが提供されていれば、音声や点字に変換することができる</li>
+<li>音声データが提供されていれば、代わりに情報を聴覚で得ることができる</li>
+</ul></li>
+<li>音声が聞こえづらい、聞こえない、利用できない環境やユーザーでもコンテンツを理解することができる
+
+<ul>
+<li>スピーカーが壊れている、激しい騒音がある環境や静かな職場など、聴覚障害を持つユーザーに限らない</li>
+</ul></li>
+<li>テキストデータで提供することにより、検索や流し読みができるようになり利便性が高まる</li>
+</ul>
+
+<h6 id="実装方法-解説-1">実装方法 / 解説</h6>
+
+<p><strong>実装方法</strong></p>
+
+<ul>
+<li>収録された音声のみのコンテンツには書き起こしたテキストを提供する
+
+<ul>
+<li>話されている内容以外に、誰が話しているかも提供する</li>
+<li>話し言葉以外の情報、例えば喝采や笑い声についても起きている順番がわかるようにできる限りテキストにする</li>
+</ul></li>
+<li>音声のない映像のみのコンテンツには、同等の情報を伝えるテキストや音声データを提供する
+
+<ul>
+<li>音声データで提供する場合は、必ずしも合わせてテキストで提供する必要はない</li>
+<li>映像のすべてをテキストや音声にする必要はない</li>
+</ul></li>
+<li>音声つき動画には、字幕（キャプション）、音声解説、もしくは書き起こしたテキストを提供する
+
+<ul>
+<li>書き起こすテキストは、音声のみならず映像コンテンツの解説も含む（台本や脚本のイメージ）</li>
+</ul></li>
+</ul>
+
+<p>代替コンテンツはコンテンツの前後に配置する、またはそれと分かる形でリンクするなどして提供する。</p>
+
+<p><strong>例外</strong></p>
+
+<p>ライブ配信のコンテンツ。ただし、可能な限り字幕の提供を行う。リアルタイムにテキストデータへと変換して提供することはコストがかかるが、聴き逃しした場合や環境の変化に強く、聴覚障害を持ったユーザー以外の利便性も高められる。</p>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="https://havelog.ayumusato.com/develop/a11y/e740-timed_base_media.html">時間依存メディアについて（カッコカリ） ::ハブろぐ</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/media-equiv.html">時間依存メディア:ガイドライン 1.2 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h4 id="1-3-様々な閲覧環境に適応できるようにする">1.3 様々な閲覧環境に適応できるようにする</h4>
+
+<p>情報、及び構造を損なうことなく、様々な方法で利用できるようにコンテンツを提供すること。</p>
+
+<h5 id="1-3-1-情報及び関係性">1.3.1 情報及び関係性</h5>
+
+<p>コンテンツやUI、及びそれらの関係性をテキストで提供するか、プログラムによる解釈ができるようにする。</p>
+
+<h6 id="実装方法-解説-2">実装方法 / 解説</h6>
+
+<p><strong>解説</strong></p>
+
+<p>「プログラムによる解釈ができる」は、主にブラウザや検索エンジンなどのUA（ユーザーエージェント）が理解できるか、と考えて良い。</p>
+
+<p><strong>実装</strong></p>
+
+<p>適切な要素を用いてマークアップし、適切な属性を使用する。次に挙げるのは代表的な例で以下に限らない。</p>
+
+<ul>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/H42.html">見出しを特定するために、h1 要素～ h6 要素を使用する</a></li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/H48.html">リストは <code>ul</code> , <code>ol</code> , <code>dl</code> を用いる</a></li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/H51.html">表の情報を提示するために、テーブルのマークアップを使用する</a></li>
+</ul>
+
+<h6 id="テスト方法">テスト方法</h6>
+
+<ul>
+<li>コードレビューによるチェック</li>
+</ul>
+
+<h6 id="達成によるメリット">達成によるメリット</h6>
+
+<p>様々なデバイスやUAにコンテンツが正確に伝えられるようになる。</p>
+
+<ul>
+<li>スクリーンリーダー</li>
+<li>ブラウザのリーダーモード</li>
+<li>スマートウォッチなどのごく狭い画面のデバイス</li>
+<li>AppleのSiriや、AmazonのAlexaなど、スクリーンを持たない音声アシスタント</li>
+<li>未知のデバイス</li>
+</ul>
+
+<h5 id="1-3-2-意味のある順序">1.3.2 意味のある順序</h5>
+
+<p>コンテンツの順番に意味がある場合は、正しく読む順番をプログラムが解釈できるようにする。</p>
+
+<h6 id="実装方法-解説-3">実装方法 / 解説</h6>
+
+<ol>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/C27">DOMの順番と表示順を一致させる</a></li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/F32.html">単語内の文字間を空けるためなど、文書の整形にスペースを利用</a>しない</li>
+</ol>
+
+<p>解説 : <a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">意味のある順序:達成基準 1.3.2 を理解する | WCAG 2.0解説書</a></p>
+
+<h6 id="テスト-チェック方法-1">テスト・チェック方法</h6>
+
+<ul>
+<li>コードレビューによるチェック</li>
+</ul>
+
+<h5 id="1-3-3-感覚的な特徴に依存しない">1.3.3 感覚的な特徴に依存しない</h5>
+
+<p>コンテンツやUIの説明は、色や形、視覚的な位置や方向、音などの感覚的な特徴だけで説明しない。</p>
+
+<h6 id="ガイドラインの意図-2">ガイドラインの意図</h6>
+
+<p>コンテンツやUIの説明が感覚的な特徴に依存すると、その感覚が使用できない場合や、コンテキストが変化した場合に利用が難しくなるため。</p>
+
+<ul>
+<li>色や形などの視覚的特徴のみで説明した場合、視覚で情報を得られない環境やユーザーは利用できない</li>
+<li>視覚的な位置や方向のみで説明した場合、レスポンシブデザインでレイアウトが変わった際に利用が困難になる</li>
+</ul>
+
+<p>何より、明確なテキストラベルで対象を指示することは分かりやすさに繋がりすべてのユーザーにとって使いやすくなる。</p>
+
+<h6 id="実装方法-解説-4">実装方法 / 解説</h6>
+
+<p><strong>良くない例</strong></p>
+
+<p>視覚的な位置のみで説明している。</p>
+
+<pre><code>次に進むにはページ右下のボタンをクリックしてください
+</code></pre>
+
+<p>形のみで説明している。</p>
+
+<pre><code>OKなら丸いボタンをクリック、キャンセルは四角いボタンをクリックしてください
+</code></pre>
+
+<p><strong>良い例</strong></p>
+
+<p>形や位置だけでなく、テキストによる説明も付け加える。</p>
+
+<pre><code>次に進むにはページ右下の「次へ」というボタンをクリックしてください。
+</code></pre>
+
+<pre><code>OKなら丸いOKと書かれたボタンを、キャンセルは四角いキャンセルとかかれたボタンをクリックしてください
+</code></pre>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/F14">UIやコンテンツについて形、または位置のみで特定</a>しない</li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/G96">UIやコンテンツについて指示、もしくは解説する文章にはUIのラベルテキストや機能についても言及する。</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html">感覚的な特徴:達成基準 1.3.3 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h6 id="テスト-チェック方法-2">テスト・チェック方法</h6>
+
+<ul>
+<li>デザインレビューによるチェック</li>
+</ul>
+
+<h4 id="1-4-判別できる">1.4 判別できる</h4>
+
+<p>コンテンツを、ユーザーにとって見やすく聞きやすいものにすること。</p>
+
+<h5 id="1-4-1-色だけで伝えない">1.4.1 色だけで伝えない</h5>
+
+<p>色が、情報を伝える、動作を示す、反応を促す、又は視覚的な要素を判別するための唯一の視覚的手段としない。</p>
+
+<h6 id="実装方法-解説-5">実装方法 / 解説</h6>
+
+<p><strong>良くない例</strong></p>
+
+<p>色の違いだけで、必須項目やエラー項目を示す</p>
+
+<pre><code class="language-html">&lt;label class=&quot;Label -required&quot;&gt;電話番号
+&lt;input type=&quot;tel&quot; required /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<pre><code class="language-css">.Label.-required {
+  color: red;
+}
+</code></pre>
+
+<pre><code class="language-html">&lt;p&gt;20文字以上500文字以内で入力してください。&lt;/p&gt;
+&lt;textarea&gt;&lt;/textarea&gt;
+&lt;p&gt;&lt;span class=&quot;NumCounter__Input -invalid&quot;&gt;19&lt;/span&gt;/500&lt;/p&gt;
+</code></pre>
+
+<pre><code class="language-css">.NumCounter__Input.-invalid {
+  color: red;
+}
+</code></pre>
+
+<p><strong>良い例</strong></p>
+
+<p>色だけでなくテキストでも必須項目やエラーであることを示す。</p>
+
+<pre><code class="language-html">&lt;label class=&quot;Label -required&quot;&gt;電話番号（必須）
+&lt;input type=&quot;tel&quot; required /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<pre><code class="language-html">&lt;p&gt;20文字以上500文字以内で入力してください。&lt;/p&gt;
+&lt;textarea&gt;&lt;/textarea&gt;
+&lt;p&gt;&lt;span class=&quot;NumCounter__Input -invalid&quot;&gt;19&lt;/span&gt;/500&lt;/p&gt;
+&lt;p&gt;入力文字が不足しています。20文字以上入力してください。&lt;/p&gt;
+</code></pre>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/G14">色の違いで伝えている情報をテキストでも伝える</a></li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/G111">色と模様、記号を併用する</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">色の使用:達成基準 1.4.1 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h6 id="テスト-チェック方法-3">テスト・チェック方法</h6>
+
+<ul>
+<li>デザインレビューによるチェック</li>
+</ul>
+
+<h5 id="1-4-2-音声を制御する">1.4.2 音声を制御する</h5>
+
+<p>可能な限り音声を自動的に再生しない。音声が自動的に再生される場合は、音声を停止、またはコンテンツの音量を調整できるメカニズムを提供する。</p>
+
+<ol>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/G171">ユーザーが望む（と予想できる）際に限って音声を自動的に再生する</a></li>
+<li>動画プレイヤーには音声の調整ボタン、ミュートボタンを搭載する</li>
+</ol>
+
+<h6 id="テスト-チェック方法-4">テスト・チェック方法</h6>
+
+<ul>
+<li>仕様策定段階での機能確認</li>
+<li>デザインレビューによるチェック</li>
+</ul>
+
+<h5 id="1-4-3-コントラストを確保する">1.4.3 コントラストを確保する</h5>
+
+<p>コンテンツやUI上のテキストやアイコンと背景に適切なコントラスト比を持たせる（4.5:1以上を推奨）。ただし、次の場合は除くが、可能な限りコントラスト比を確保する。</p>
+
+<ul>
+<li>装飾的な文字、意味のない文字</li>
+<li>操作不可能なUI上のテキスト</li>
+<li>ロゴタイプ</li>
+<li>コントラスト比が <code>3:1</code> 以上あり、かつ文字サイズが <code>18pt</code> 以上の場合</li>
+</ul>
+
+<h6 id="実装方法-解説-6">実装方法 / 解説</h6>
+
+<p><strong>良くない例</strong></p>
+
+<p>現在のFRESH LIVEのカラースキームで推奨コントラスト比を満たしていないの組み合わせ。</p>
+
+<div class="color-scheme">
+
+
+<dl>
+<dt><code>--gray</code>と<code>--white</code>のコントラスト比は<em>2.7:1</em></dt>
+<dd><p style="background-color: #9e9e9e;color: white;padding: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt>
+<code>--gray-darkest</code>と<code>--blue</code>のコントラスト比は<em>4.2:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #333;color: #00a0d6;padding: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt>
+<code>--white</code>と<code>--blue</code>のコントラスト比は<em>3:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #fff;color: #00a0d6;padding: 1em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, natus, odit. Dolor harum recusandae optio provident temporibus vero possimus quam itaque consequuntur, qui cum officiis at ducimus. Reiciendis quasi, temporibus.</p>
+</dd>
+<dt>
+<code>--gray-deepest</code>と<code>--red</code>のコントラスト比は<em>4:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #181818;color: #d9402b;padding: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p>
+</dd>
+<dt>
+<code>--gray-darker</code>と<code>--green</code>のコントラスト比は<em>3.7:1</em>
+<small>※太字 or 大きな文字サイズであればOK</small>
+</dt>
+<dd><p style="background-color: #484848;color: #20bb75;padding: 1em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+
+</div>
+
+
+<p><strong>最低限確保できているカラースキームの組み合わせ</strong></p>
+
+<div class="color-scheme">
+
+
+<dl>
+<dt><code>--gray-darker</code>と<code>--white</code>のコントラスト比は<em>9.1:1</em></dt>
+<dd><p style="background-color: #484848;color: white;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatum maxime voluptates quo aspernatur reiciendis, illo in tenetur. Minus odit aperiam ratione corporis nesciunt repellat cum vitae libero eius fuga!
+</p></dd>
+<dt><code>--gray-deep</code>と<code>--blue</code>のコントラスト比は<em>4.78:1</em></dt>
+<dd><p style="background-color: #2a2a2a;color: #00a0d6;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid incidunt fuga porro accusantium quaerat, doloremque autem magnam, aliquam fugit maiores. Aliquid a iste sapiente. Asperiores veniam placeat eaque, aperiam!</p>
+</dd>
+<dt><code>--black</code>と<code>--red</code>のコントラスト比は<em>4.7:1</em></dt>
+<dd><p style="background-color: #000;color: #d9402b;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--white</code>と<code>--red</code>のコントラスト比は<em>4.5:1</em></dt>
+<dd><p style="background-color: #fff;color: #d9402b;padding: 1em;margin-bottom: 2em;border: 1px solid;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam obcaecati sint dicta sunt reprehenderit laudantium modi velit distinctio. Id facilis odio ipsum itaque vel saepe cumque iste ex, veniam obcaecati.</p></dd>
+<dt><code>--gray-darkest</code>と<code>--green</code>のコントラスト比は<em>5.1:1</em></dt>
+<dd><p style="background-color: #333;color: #20bb75;padding: 1em;margin-bottom: 2em;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi aliquam aut nesciunt vitae sequi quas commodi eveniet debitis, fugiat laborum architecto illum, totam in! Nemo eum, sequi porro hic cumque.</p>
+</dd>
+</dl>
+
+
+</div>
+
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">コントラスト (最低限) : 達成基準 1.4.3 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h6 id="テスト-チェック方法-5">テスト・チェック方法</h6>
+
+<ol>
+<li>Sketch デザインデータをプラグインでチェックする
+
+<ul>
+<li><a href="https://github.com/stark-contrast/stark-sketch-plugin">Stark</a></li>
+<li><a href="https://github.com/getflourish/Sketch-Color-Contrast-Analyser">Sketch-Color-Contrast-Analyser</a></li>
+</ul></li>
+<li>デザインレビューによるチェック</li>
+</ol>
+
+<p>※プラグインでは文字サイズと太字が考慮されないので注意する。</p>
+
+<h3 id="2-操作できる">2 操作できる</h3>
+
+<p>UIコンポーネント及びナビゲーションは操作可能でなければならない。</p>
+
+<h4 id="2-1-さまざまなデバイスでの操作">2.1 さまざまなデバイスでの操作</h4>
+
+<h5 id="2-1-1-キーボード-タッチデバイスでの操作">2.1.1 キーボード、タッチデバイスでの操作</h5>
+
+<p>コンテンツやUIのすべての機能は、キーボードやタッチインタフェースで操作できるようにする。</p>
+
+<h6 id="実装方法-解説-7">実装方法 / 解説</h6>
+
+<p><strong>良くない実装例</strong></p>
+
+<p>フォーカスを受け取れない要素への <code>click</code> イベントの付与や <code>:hover</code> 擬似クラスのみを利用したコンテンツの出し分けなど。</p>
+
+<pre><code class="language-html">&lt;div onclick=&quot;...&quot;&gt;
+  content...
+ &lt;/div&gt;
+</code></pre>
+
+<p><strong>良い実装例</strong></p>
+
+<p>フォーカスを受け取れる要素の使用、<code>tabindex</code> 属性の付与、<code>:focus</code> 擬似クラスの併用など。</p>
+
+<pre><code class="language-html">&lt;button type=&quot;button&quot; onclick=&quot;...&quot;&gt;
+   content...
+&lt;/button&gt;
+</code></pre>
+
+<p><a href="http://waic.jp/docs/WCAG-TECHS/H91">HTMLのフォームコントロール、及びリンクを使用する</a></p>
+
+<p><strong>解説</strong></p>
+
+<p>マウスのみを想定しているUIでは、他のデバイスから使用できないことが多くあるが、キーボードやタッチデバイスでの操作を担保することで他のデバイスによる操作もカバーしやすくなる。</p>
+
+<p><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html">キーボード : 達成基準 2.1.1 を理解する | WCAG 2.0解説書</a></p>
+
+<h6 id="例外">例外</h6>
+
+<ul>
+<li>手書き入力など、根本的な機能が始点から終点まで続く一連の軌跡に依存している機能</li>
+</ul>
+
+<p>※ドラッグ&amp;ドロップ操作は軌跡に依存しないので、この例外には当てはまらない。</p>
+
+<h6 id="テスト-チェック方法-6">テスト・チェック方法</h6>
+
+<ul>
+<li>ESlintによる自動チェック
+
+<ul>
+<li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/interactive-supports-focus.md">eslint-plugin-jsx-a11y/interactive-supports-focus</a></li>
+<li><a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md">eslint-plugin-jsx-a11y/mouse-events-have-key-events</a></li>
+</ul></li>
+<li>コードレビューによるチェック</li>
+<li>QAテスト（マウスと同じ操作がキーボードでできるかをテストする）</li>
+</ul>
+
+<h5 id="2-1-2-シンプルな操作で操作できるようにする">2.1.2 シンプルな操作で操作できるようにする</h5>
+
+<p>コンテンツやUIのすべての機能は、複雑な操作に依存せずシンプルな操作で操作できるようにする。</p>
+
+<h6 id="実装方法-解説-8">実装方法 / 解説</h6>
+
+<p>複雑な操作例 :</p>
+
+<ol>
+<li>10秒以内に <kbd>↑</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd><kbd>←</kbd><kbd>→</kbd><kbd>a</kbd><kbd>b</kbd><kbd>a</kbd><kbd>b</kbd> を入力しないと出てこないメニュー</li>
+<li><kbd>→</kbd><kbd>↓</kbd><kbd>→+↓</kbd><kbd>p</kbd> を0.3秒以内に入力しないと出ない必殺技</li>
+</ol>
+
+<h6 id="例外-1">例外</h6>
+
+<p>デバッグモードへの移行など、ユーザーには秘匿した形で機能を提供する場合は例外とする。ただしその場合もチームメンバーの開発者の使用デバイスを考慮し慎重に行うこと。</p>
+
+<h5 id="2-1-3-特定のデバイスの機能に依存しない">2.1.3 特定のデバイスの機能に依存しない</h5>
+
+<p>コンテンツやUIのすべての機能は、デバイスの特定の機能（タッチの圧力センサや、傾きセンサ）などに依存しなくても使用できるようにする。</p>
+
+<h6 id="実装方法-解説-9">実装方法 / 解説</h6>
+
+<p><strong>良くない実装例</strong></p>
+
+<p>iOS のフォースタッチでのみ動作するメニュー。</p>
+
+<p><strong>良い実装</strong></p>
+
+<p>他の操作方法に切り替える OR 代替の動作方法を提供する。</p>
+
+<h6 id="例外-2">例外</h6>
+
+<ul>
+<li>VR（Virtual Reality）など、特定のデバイス専用に制作されているコンテンツ</li>
+<li>ペンの筆圧検知による線の太さの変更など、特定のデバイス専用の機能</li>
+</ul>
+
+<h5 id="2-1-4-タッチターゲットサイズ">2.1.4 タッチターゲットサイズ</h5>
+
+<p>ポインティングのターゲットサイズは、タッチインタフェース向けUIでは 44×44 px以上を確保する。</p>
+
+<h6 id="実装-解説">実装 / 解説</h6>
+
+<ul>
+<li>ボタンUIやナビゲーションリンクに十分な余白を設ける</li>
+</ul>
+
+<p><strong>解説</strong></p>
+
+<p>タッチインタフェースにおいて、1つの指でタップするのにターゲットサイズが小さすぎると快適に操作できない。また視線入力デバイスなどのユーザービリティも向上する。</p>
+
+<p><a href="https://www.youtube.com/watch?v=g1iLTtjLD8E">ハーティーラダーでＷｅｂ閲覧 - YouTube</a></p>
+
+<h6 id="例外-3">例外</h6>
+
+<ul>
+<li>文章中のテキストリンク（※ただし、十分なフォントサイズを確保し、読みやすさだけでなく操作のしやすさも確保する）</li>
+</ul>
+
+<h6 id="テスト-チェック方法-7">テスト・チェック方法</h6>
+
+<ul>
+<li>デザインレビューによるチェック</li>
+<li>コードレビューによるチェック</li>
+</ul>
+
+<h4 id="2-2-十分な時間">2.2 十分な時間</h4>
+
+<p>ユーザーがコンテンツを読み、機能を使用するために十分な時間を提供すること。</p>
+
+<h5 id="2-2-1-コンテンツの制限時間">2.2.1 コンテンツの制限時間</h5>
+
+<p>コンテンツに制限時間を設けない。</p>
+
+<h6 id="例外-4">例外</h6>
+
+<ul>
+<li>制限時間があるコンテンツを利用する前に、制限時間を解除、又は初期設定の10倍以上の制限時間に変更することができる場合</li>
+<li>時間切れとなる前に警告し、20秒前には簡単な操作で制限時間を延長することができる場合</li>
+<li>リアルタイムのイベント（ライブ配信中のアンケートやオークションなど）において、制限時間が必須の場合</li>
+<li>制限時間が20時間よりも長い場合</li>
+</ul>
+
+<h6 id="実装方法-解説-10">実装方法 / 解説</h6>
+
+<p><strong>解説</strong></p>
+
+<p>自動更新するコンテンツ（ニュースティッカーやカルーセル）も、一種の制限時間付きのコンテンツと考えられる。</p>
+
+<ul>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html">タイミング調整可能 : 達成基準 2.2.1 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h5 id="2-2-2-自動再生するコンテンツを一時停止-停止-非表示にできるようにする">2.2.2 自動再生するコンテンツを一時停止、停止、非表示にできるようにする</h5>
+
+<p>動きのあるコンテンツが自動で開始され、また他のコンテンツと並行して表示される場合、ユーザーが一時停止、停止、または非表示にできるようにする。</p>
+
+<h6 id="実装方法-解説-11">実装方法 / 解説</h6>
+
+<p>動きのあるコンテンツ = アニメーション、点滅、スクロール、コンテンツの自動更新も含む。</p>
+
+<p>ウェブページの中に動作し続けるコンテンツがあると、その他のコンテンツの利用の妨げとなる。特に注意力欠如障害のユーザーなどはウェブページ全てを利用できない可能性がある。</p>
+
+<h6 id="例外-5">例外</h6>
+
+<ul>
+<li>コンテンツの動作が5秒未満の場合</li>
+<li>動き、又は自動更新がページ全体にとって必要不可欠な動作の一部である場合</li>
+</ul>
+
+<h4 id="2-3-発作の防止">2.3 発作の防止</h4>
+
+<p>発作を引き起こすようなコンテンツを設計しないこと。</p>
+
+<h5 id="2-3-1-フラッシュさせない">2.3.1 フラッシュさせない</h5>
+
+<p>ウェブページには、1秒間に3回を超える閃光を放つものがない、又は閃光が一般閃光閾値及び赤色閃光閾値を下回っている。</p>
+
+<h6 id="実装方法-解説-12">実装方法 / 解説</h6>
+
+<p>一般閃光閾値及び赤色閃光閾値 (general flash and red flash thresholds)</p>
+
+<blockquote>
+<p>あらゆる1秒間において、 一般閃光及び／又は赤色閃光 は3回以下である。もしくは、一般的な閲覧距離で、同時に生じている閃光が占める領域の合計が、画面上のどの視野10度においても、合計0.006ステラジアン (画面上の視野10度の25％) よりも多くを占めていない。</p>
+
+<p>ここで:
+一般閃光とは、暗いほうの相対輝度が0.80未満であるときの、最大相対輝度の10%以上の相対輝度の交互の変化のことである。ここでいう「交互の変化」とは、増加した後に減少する、又は減少した後に増加するものを指す。そして、
+赤色閃光とは、彩度の高い赤色を含んだ交互の遷移のことである。
+例外: ホワイトノイズ又は1辺が (典型的な閲覧距離における視野の) 0.1度未満の市松模様のように、細かくて整っている模様の閃光は、閾値を超えることにはならない。</p>
+</blockquote>
+
+<p><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">3回の閃光、又は閾値以下:達成基準 2.3.1 を理解する</a></p>
+
+<h4 id="2-4-ナビゲーション">2.4 ナビゲーション</h4>
+
+<p>ユーザーがコンテンツを探し出したり、現在位置を確認したりする手助けをする。</p>
+
+<h5 id="2-4-1-繰り返す情報のスキップ">2.4.1 繰り返す情報のスキップ</h5>
+
+<p>複数のページ上で繰り返されている情報（ナビゲーションやサイトロゴなど）をスキップするメカニズムが利用できる。</p>
+
+<h6 id="実装方法-解説-13">実装方法 / 解説</h6>
+
+<p><strong>解説</strong></p>
+
+<p>必ずしもスキップリンクを設置する必要はなく、ウェブブラウザ標準の機能が利用できるように適切なマークアップを使用することで達成できる。マークアップによる達成方法は下記の通り。</p>
+
+<ul>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/ARIA11">ARIA11: ページの領域を特定するために ARIA ランドマークを使用する | WCAG 2.0 達成方法集</a></li>
+<li><a href="http://waic.jp/docs/WCAG-TECHS/H69">H69: コンテンツの各セクションの開始位置に見出し要素を提供する | WCAG 2.0 達成方法集</a></li>
+</ul>
+
+<p><strong>事例</strong></p>
+
+<blockquote>
+<p>ニュースを配信する組織のホームページには、広告、検索、その他のサービスのためのたくさんのブロック及びサイドバーに囲まれて、ページの中央にメインの記事がある。ページの先頭に、そのメインの記事へジャンプするリンクがある。このリンクを使わないと、キーボードを使用している利用者は、メインの記事へ到達するまでに Tab キーを押下しながら40前後のリンクを通り抜ける必要がある。また、スクリーンリーダーの利用者は、200の単語を聞かなければならない。そして、画面拡大ソフトの利用者は、メインの記事の場所を探し回らなければならなくなる。</p>
+</blockquote>
+
+<p><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html#navigation-mechanisms-skip-examples-head">ブロックスキップ : 達成基準 2.4.1 を理解する | WCAG 2.0解説書</a></p>
+
+<h5 id="2-4-2-ページタイトル">2.4.2 ページタイトル</h5>
+
+<p>ウェブページには、主題又は目的を説明したタイトルがある。</p>
+
+<h6 id="実装方法-解説-14">実装方法 / 解説</h6>
+
+<p>HTMLの <code>&lt;title&gt;</code> 要素に、適切なタイトルを他のページと重複することなく記述すること。</p>
+
+<p><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html">ページタイトル : 達成基準 2.4.2 を理解する | WCAG 2.0解説書</a></p>
+
+<h3 id="3-理解できる">3 理解できる</h3>
+
+<h4 id="3-1-読みやすさ">3.1 読みやすさ</h4>
+
+<p>ユーザーや、ユーザーが使用するプログラムにとって理解しやすいような記述にする。</p>
+
+<h5 id="3-1-1-ページの言語">3.1.1 ページの言語</h5>
+
+<p>それぞれのウェブページのデフォルトの自然言語がどの言語であるか、プログラムによる解釈が可能である。</p>
+
+<h6 id="実装方法-解説-15">実装方法 / 解説</h6>
+
+<p><code>&lt;html&gt;</code> 要素に <code>lang</code> 属性を記述する。</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+</code></pre>
+
+<h4 id="3-2-予測できる">3.2 予測できる</h4>
+
+<h5 id="3-2-1-ユーザーの意図しない変更をしない">3.2.1 ユーザーの意図しない変更をしない</h5>
+
+<p>ユーザーが予想できないタイミングでページ全体に及ぶような変更や現在地の移動を引き起こさない。</p>
+
+<h6 id="例外-6">例外</h6>
+
+<ul>
+<li>変更が起きることをユーザーへ事前に伝えている場合</li>
+</ul>
+
+<h6 id="実装方法-解説-16">実装方法 / 解説</h6>
+
+<p><strong>解説</strong></p>
+
+<p>ユーザーが予想できないタイミング = マウスホバーやキーボードフォーカスを当てるだけなど。</p>
+
+<p>ホバーやキーボードフォーカスは、操作の前段階でありそのタイミングで重要な変化を引き起こすとユーザーが混乱してしまう。</p>
+
+<p><strong>良くない実装例</strong></p>
+
+<ul>
+<li>フォーカスを受け取ったりマウスホバーすると自動的に送信されてしまうフォーム</li>
+<li>フォーカスを受け取ったりマウスホバーすると新しいウィンドウをひらかせるコンポーネント</li>
+<li>フォーカスを受け取ったりマウスホバーすると、ページ内の現在位置を移動したり別のページに移動したりさせるコンポーネント</li>
+</ul>
+
+<p><strong>良い実装例</strong></p>
+
+<p>クリックやエンターキーによる実行で変更を起こす。</p>
+
+<h4 id="3-3-入力を支援する">3.3 入力を支援する</h4>
+
+<h5 id="3-3-1-エラーの特定">3.3.1 エラーの特定</h5>
+
+<p>入力エラーが自動的に検出された場合は、エラーとなっている箇所が特定され、そのエラーがユーザーにテキストで説明される。</p>
+
+<h6 id="実装方法-解説-17">実装方法 / 解説</h6>
+
+<p><strong>良くない実装例</strong></p>
+
+<p>スタイルのみでエラーであることを示し、エラーの内容が分からない。</p>
+
+<pre><code class="language-html">&lt;label&gt; ふりがな
+&lt;input type=&quot;text&quot; class=&quot;Input -invalid&quot; /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<pre><code class="language-css">.Input.-invalid {
+	border: 2px solid red;
+}
+</code></pre>
+
+<p><strong>良い実装例</strong></p>
+
+<p>テキストでエラーの内容が明示されている。</p>
+
+<pre><code class="language-html">&lt;label&gt; ふりがな
+&lt;input type=&quot;text&quot; class=&quot;Input -invalid&quot; /&gt;
+&lt;/label&gt;
+&lt;p&gt;ふりがなはひらがなかカタカナで入力してください&lt;/p&gt;
+</code></pre>
+
+<p>※スタイルでも合わせて明示することを否定するものではない。</p>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html">エラーの特定 : 達成基準 3.3.1 を理解する | WCAG 2.0解説書</a></li>
+<li><a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA21">ARIA21: Using Aria-Invalid to Indicate An Error Field | Techniques for WCAG 2.0</a></li>
+</ul>
+
+<h5 id="3-3-2-入力欄のラベルまたは説明">3.3.2 入力欄のラベルまたは説明</h5>
+
+<p>ユーザーの入力を要求するUIには、ラベル又は説明文を提供する。</p>
+
+<h6 id="実装方法-解説-18">実装方法 / 解説</h6>
+
+<p><strong>良くない実装方法</strong></p>
+
+<p><code>placeholder</code> 属性を入力内容の説明に使用する。</p>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; placeholder=&quot;コメントを入力する&quot; /&gt;
+</code></pre>
+
+<p>※ <code>placeholder</code> 属性での説明では入力が開始されると非表示になり、ユーザーを混乱させてしまう。</p>
+
+<p><strong>良い実装方法</strong></p>
+
+<p>近接する位置に説明を置き、 <code>&lt;label&gt;</code> 要素を用いて関連づける。</p>
+
+<pre><code class="language-html">&lt;label&gt; コメントを入力する
+&lt;input type=&quot;text&quot; /&gt;
+&lt;/label&gt;
+</code></pre>
+
+<p>入力欄の隣に明確なラベルづけされたボタンを配置し、入力欄の説明とする。</p>
+
+<pre><code class="language-html">&lt;input type=&quot;search&quot; /&gt;
+&lt;button type=&quot;submit&quot;&gt;検索&lt;/button&gt;
+</code></pre>
+
+<p>説明と入力欄で構成されている節では、説明を見出しとし関連を可視化する。</p>
+
+<pre><code class="language-html">&lt;section&gt;
+&lt;h2&gt;ご意見・ご要望&lt;/h2&gt;
+&lt;form&gt;
+&lt;textarea&gt;&lt;/textarea&gt;
+&lt;button type=&quot;submit&quot;&gt;送信する&lt;/button&gt;
+&lt;/form&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html">ラベル又は説明 : 達成基準 3.3.2 を理解する | WCAG 2.0解説書</a></li>
+</ul>
+
+<h3 id="4-堅牢性">4 堅牢性</h3>
+
+<p>コンテンツは、支援技術を含む様々なUAが確実に解釈できるよう十分に堅牢 (robust) でなければならない。</p>
+
+<h4 id="4-1-互換性">4.1 互換性</h4>
+
+<p>未知のものを含む、さまざまなユーザーエージェントとの互換性を高めること。</p>
+
+<h5 id="4-1-1-構文解析">4.1.1 構文解析</h5>
+
+<p>HTML、及び構築するDOMは、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どのIDも一意的にする。ただし、仕様で認められているものを除く。</p>
+
+<p><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-parses.html">構文解析 : 達成基準 4.1.1 を理解する | WCAG 2.0解説書</a></p>
+
+<h5 id="4-1-2-名前-役割-及び値">4.1.2 名前・役割、及び値</h5>
+
+<p>ユーザーが操作するすべてのUI（フォームを構成する要素、リンクなど）では、名前 (name) 及び役割 (role) は、プログラムによる解釈が可能である。又、状態、プロパティ、ユーザーが設定可能な値はプログラムによる設定が可能である。そして、支援技術を含むUAが、これらの項目に対する変更通知を利用できる。</p>
+
+<h6 id="実装方法-解説-19">実装方法 / 解説</h6>
+
+<p><strong>良くない実装方法</strong></p>
+
+<p>HTMLにある要素を利用せず、<code>&lt;div&gt;</code> や <code>&lt;span&gt;</code> を利用する。</p>
+
+<pre><code class="language-html">&lt;span class=&quot;Button&quot;&gt;button&lt;/span&gt;
+</code></pre>
+
+<p><strong>良い実装例</strong></p>
+
+<p>HTMLで定義されている要素を使用する。HTMLに適切な要素がない場合、WAI-ARIA で定義されている <code>role</code> 属性で適切なものがあればそれを指定する。</p>
+
+<pre><code class="language-html">&lt;button class=&quot;Button&quot;&gt;button&lt;/button&gt;
+</code></pre>
+
+<pre><code class="language-html">&lt;button role=&quot;tab&quot; class=&quot;Tab&quot;&gt;Tab&lt;/button&gt;
+</code></pre>
+
+<p><strong>解説</strong></p>
+
+<ul>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">名前 (name) ・役割 (role) 及び値 (value) : 達成基準 4.1.2 を理解する | WCAG 2.0解説書</a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">5. The Roles Model : Accessible Rich Internet Applications (WAI-ARIA) 1.1</a></li>
+</ul>
+
+        </article>
+      </div>
+    </main>
+
+    <aside class="Aside">
+<div class="Container">
+  <ul class="Aside__SocialButtons SocialButtons">
+    <li class="SocialButtons__Item -GitHubStar"><iframe src="https://ghbtns.com/github-btn.html?user=openfresh&repo=a11y-guidelines&type=star&count=true&size=large" width="75" height="30" title="GitHub Star"></iframe></li>
+    <li class="SocialButtons__Item -HatenaBookmark"><a href="http://b.hatena.ne.jp/entry/https://openfresh.github.io/a11y-guidelines/player/"><img src="https://cdn-ak.b.st-hatena.com/images/entry-button/standard-en.svg" alt="Add HatenaBookmark this website." width="78" height="14" /></a></li>
+  </ul>
+</div>
+</aside>
+
+
+    <footer class="Footer">
+  <div class="Container">
+    <div class="Footer__Credit Credit">
+      <p class="Credit__Logo"><a href="https://freshlive.tv"><img src="https://openfresh.github.io/a11y-guidelines/img/logo.svg" alt="FRESH LIVE" /></a></p>
+      <p class="Credit__Copyright"><small>© <a href="https://www.cyberagent.co.jp/">CyberAgent, Inc.</a> 2017</small></p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const blocks = document.querySelectorAll('pre code');
+  for (const block of blocks) {
+    hljs.highlightBlock(block);
+  }
+});
+</script>
+
+  </body>
+</html>
